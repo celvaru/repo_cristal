@@ -16,5 +16,11 @@ namespace Comercial_Cristal
         {
             InitializeComponent();
         }
+
+        private void ncliente_btn_Click(object sender, EventArgs e)
+        {
+            form_cliente form_cliente = new form_cliente();
+            form_cliente.Show();
+        }
     }
 }

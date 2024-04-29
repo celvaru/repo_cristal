@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_principal));
             this.label1 = new System.Windows.Forms.Label();
             this.btn_nreporte = new System.Windows.Forms.Button();
-            this.btn_ncompra = new System.Windows.Forms.Button();
+            this.btn_agregar = new System.Windows.Forms.Button();
             this.btn_nventa = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -57,27 +57,29 @@
             this.btn_nreporte.Image = ((System.Drawing.Image)(resources.GetObject("btn_nreporte.Image")));
             this.btn_nreporte.Location = new System.Drawing.Point(79, 407);
             this.btn_nreporte.Name = "btn_nreporte";
-            this.btn_nreporte.Size = new System.Drawing.Size(250, 75);
+            this.btn_nreporte.Size = new System.Drawing.Size(257, 75);
             this.btn_nreporte.TabIndex = 7;
             this.btn_nreporte.Text = "Generar reporte";
             this.btn_nreporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_nreporte.UseVisualStyleBackColor = false;
+            this.btn_nreporte.Click += new System.EventHandler(this.btn_nreporte_Click);
             // 
-            // btn_ncompra
+            // btn_agregar
             // 
-            this.btn_ncompra.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btn_ncompra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_ncompra.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ncompra.FlatAppearance.BorderSize = 0;
-            this.btn_ncompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ncompra.Image = ((System.Drawing.Image)(resources.GetObject("btn_ncompra.Image")));
-            this.btn_ncompra.Location = new System.Drawing.Point(79, 180);
-            this.btn_ncompra.Name = "btn_ncompra";
-            this.btn_ncompra.Size = new System.Drawing.Size(250, 75);
-            this.btn_ncompra.TabIndex = 6;
-            this.btn_ncompra.Text = "   Nueva compra";
-            this.btn_ncompra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_ncompra.UseVisualStyleBackColor = false;
+            this.btn_agregar.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_agregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_agregar.FlatAppearance.BorderSize = 0;
+            this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_agregar.Image = ((System.Drawing.Image)(resources.GetObject("btn_agregar.Image")));
+            this.btn_agregar.Location = new System.Drawing.Point(79, 180);
+            this.btn_agregar.Name = "btn_agregar";
+            this.btn_agregar.Size = new System.Drawing.Size(257, 75);
+            this.btn_agregar.TabIndex = 6;
+            this.btn_agregar.Text = "   Agregar productos";
+            this.btn_agregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_agregar.UseVisualStyleBackColor = false;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_ncompra_Click);
             // 
             // btn_nventa
             // 
@@ -89,11 +91,12 @@
             this.btn_nventa.Image = ((System.Drawing.Image)(resources.GetObject("btn_nventa.Image")));
             this.btn_nventa.Location = new System.Drawing.Point(79, 290);
             this.btn_nventa.Name = "btn_nventa";
-            this.btn_nventa.Size = new System.Drawing.Size(250, 75);
+            this.btn_nventa.Size = new System.Drawing.Size(257, 75);
             this.btn_nventa.TabIndex = 5;
             this.btn_nventa.Text = "   Nueva venta";
             this.btn_nventa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_nventa.UseVisualStyleBackColor = false;
+            this.btn_nventa.Click += new System.EventHandler(this.btn_nventa_Click);
             // 
             // form_principal
             // 
@@ -103,7 +106,7 @@
             this.ClientSize = new System.Drawing.Size(918, 537);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_nreporte);
-            this.Controls.Add(this.btn_ncompra);
+            this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.btn_nventa);
             this.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -119,7 +122,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_nreporte;
-        private System.Windows.Forms.Button btn_ncompra;
+        private System.Windows.Forms.Button btn_agregar;
         private System.Windows.Forms.Button btn_nventa;
     }
 }

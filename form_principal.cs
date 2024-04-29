@@ -16,5 +16,22 @@ namespace Comercial_Cristal
         {
             InitializeComponent();
         }
+
+        private void btn_ncompra_Click(object sender, EventArgs e)
+        {
+            form_compra form_Compra = new form_compra();
+            form_Compra.Show();
+        }
+
+        private void btn_nventa_Click(object sender, EventArgs e)
+        {
+            form_venta form_venta = new form_venta();
+            form_venta.Show();
+        }
+
+        private void btn_nreporte_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
