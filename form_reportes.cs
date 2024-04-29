@@ -16,5 +16,10 @@ namespace Comercial_Cristal
         {
             InitializeComponent();
         }
+
+        private void btn_volver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -17,5 +17,10 @@ namespace Comercial_Cristal
             InitializeComponent();
         }
 
+        private void btn_pass_Click(object sender, EventArgs e)
+        {
+            form_password form_password = new form_password();
+            form_password.Show();
+        }
     }
 }

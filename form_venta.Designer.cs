@@ -28,21 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.date_fecha = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ncliente_btn = new System.Windows.Forms.Button();
+            this.txt_ci = new System.Windows.Forms.TextBox();
+            this.txt_nombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabla_detalle = new System.Windows.Forms.DataGridView();
             this.combo_producto = new System.Windows.Forms.ComboBox();
             this.txt_cantidad = new System.Windows.Forms.TextBox();
-            this.txt_punitario = new System.Windows.Forms.TextBox();
+            this.txt_precio = new System.Windows.Forms.TextBox();
             this.txt_subtotal = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -53,11 +56,9 @@
             this.label_total = new System.Windows.Forms.Label();
             this.btn_limpiar = new FontAwesome.Sharp.IconButton();
             this.btn_registrar = new FontAwesome.Sharp.IconButton();
-            this.btn_cancelar = new FontAwesome.Sharp.IconButton();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.txt_nombre = new System.Windows.Forms.TextBox();
-            this.txt_ci = new System.Windows.Forms.TextBox();
-            this.ncliente_btn = new System.Windows.Forms.Button();
+            this.btn_volver = new FontAwesome.Sharp.IconButton();
+            this.btn_imprimir = new FontAwesome.Sharp.IconButton();
+            this.btn_aumentar = new FontAwesome.Sharp.IconButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_detalle)).BeginInit();
             this.SuspendLayout();
@@ -125,6 +126,35 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del cliente";
             // 
+            // ncliente_btn
+            // 
+            this.ncliente_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ncliente_btn.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.ncliente_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ncliente_btn.Location = new System.Drawing.Point(73, 120);
+            this.ncliente_btn.Name = "ncliente_btn";
+            this.ncliente_btn.Size = new System.Drawing.Size(162, 45);
+            this.ncliente_btn.TabIndex = 65;
+            this.ncliente_btn.Text = "Nuevo cliente";
+            this.ncliente_btn.UseVisualStyleBackColor = true;
+            this.ncliente_btn.Click += new System.EventHandler(this.ncliente_btn_Click);
+            // 
+            // txt_ci
+            // 
+            this.txt_ci.Location = new System.Drawing.Point(117, 77);
+            this.txt_ci.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txt_ci.Name = "txt_ci";
+            this.txt_ci.Size = new System.Drawing.Size(160, 30);
+            this.txt_ci.TabIndex = 64;
+            // 
+            // txt_nombre
+            // 
+            this.txt_nombre.Location = new System.Drawing.Point(117, 36);
+            this.txt_nombre.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txt_nombre.Name = "txt_nombre";
+            this.txt_nombre.Size = new System.Drawing.Size(160, 30);
+            this.txt_nombre.TabIndex = 63;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -166,35 +196,35 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabla_detalle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tabla_detalle.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tabla_detalle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabla_detalle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.tabla_detalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tabla_detalle.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tabla_detalle.DefaultCellStyle = dataGridViewCellStyle2;
             this.tabla_detalle.Location = new System.Drawing.Point(372, 230);
             this.tabla_detalle.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.tabla_detalle.Name = "tabla_detalle";
             this.tabla_detalle.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tabla_detalle.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabla_detalle.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.tabla_detalle.Size = new System.Drawing.Size(586, 222);
             this.tabla_detalle.TabIndex = 37;
             // 
@@ -215,14 +245,14 @@
             this.txt_cantidad.Size = new System.Drawing.Size(160, 30);
             this.txt_cantidad.TabIndex = 32;
             // 
-            // txt_punitario
+            // txt_precio
             // 
-            this.txt_punitario.Enabled = false;
-            this.txt_punitario.Location = new System.Drawing.Point(801, 106);
-            this.txt_punitario.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.txt_punitario.Name = "txt_punitario";
-            this.txt_punitario.Size = new System.Drawing.Size(157, 30);
-            this.txt_punitario.TabIndex = 31;
+            this.txt_precio.Enabled = false;
+            this.txt_precio.Location = new System.Drawing.Point(801, 106);
+            this.txt_precio.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txt_precio.Name = "txt_precio";
+            this.txt_precio.Size = new System.Drawing.Size(157, 30);
+            this.txt_precio.TabIndex = 31;
             // 
             // txt_subtotal
             // 
@@ -246,12 +276,12 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(683, 109);
+            this.label10.Location = new System.Drawing.Point(659, 109);
             this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(106, 21);
+            this.label10.Size = new System.Drawing.Size(130, 21);
             this.label10.TabIndex = 28;
-            this.label10.Text = "P/Unitario:";
+            this.label10.Text = "Precio metro:";
             // 
             // label9
             // 
@@ -277,7 +307,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Rockwell", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(593, 40);
+            this.label2.Location = new System.Drawing.Point(573, 40);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(187, 43);
@@ -313,9 +343,9 @@
             this.btn_limpiar.IconColor = System.Drawing.Color.Black;
             this.btn_limpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_limpiar.IconSize = 40;
-            this.btn_limpiar.Location = new System.Drawing.Point(705, 480);
+            this.btn_limpiar.Location = new System.Drawing.Point(817, 488);
             this.btn_limpiar.Name = "btn_limpiar";
-            this.btn_limpiar.Size = new System.Drawing.Size(162, 58);
+            this.btn_limpiar.Size = new System.Drawing.Size(141, 50);
             this.btn_limpiar.TabIndex = 61;
             this.btn_limpiar.Text = "Limpiar";
             this.btn_limpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -333,71 +363,75 @@
             this.btn_registrar.IconColor = System.Drawing.Color.Black;
             this.btn_registrar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btn_registrar.IconSize = 40;
-            this.btn_registrar.Location = new System.Drawing.Point(475, 480);
+            this.btn_registrar.Location = new System.Drawing.Point(648, 488);
             this.btn_registrar.Name = "btn_registrar";
-            this.btn_registrar.Size = new System.Drawing.Size(162, 58);
+            this.btn_registrar.Size = new System.Drawing.Size(141, 50);
             this.btn_registrar.TabIndex = 60;
             this.btn_registrar.Text = "Registrar";
             this.btn_registrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_registrar.UseVisualStyleBackColor = true;
             // 
-            // btn_cancelar
+            // btn_volver
             // 
-            this.btn_cancelar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cancelar.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.btn_cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCyan;
-            this.btn_cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
-            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cancelar.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
-            this.btn_cancelar.IconColor = System.Drawing.Color.Black;
-            this.btn_cancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_cancelar.IconSize = 40;
-            this.btn_cancelar.Location = new System.Drawing.Point(95, 480);
-            this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Rotation = 180D;
-            this.btn_cancelar.Size = new System.Drawing.Size(162, 58);
-            this.btn_cancelar.TabIndex = 59;
-            this.btn_cancelar.Text = "Cancelar";
-            this.btn_cancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_volver.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_volver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_volver.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_volver.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCyan;
+            this.btn_volver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
+            this.btn_volver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_volver.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            this.btn_volver.IconColor = System.Drawing.Color.Black;
+            this.btn_volver.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_volver.IconSize = 40;
+            this.btn_volver.Location = new System.Drawing.Point(22, 488);
+            this.btn_volver.Name = "btn_volver";
+            this.btn_volver.Rotation = 180D;
+            this.btn_volver.Size = new System.Drawing.Size(141, 50);
+            this.btn_volver.TabIndex = 59;
+            this.btn_volver.Text = "Volver";
+            this.btn_volver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_volver.UseVisualStyleBackColor = true;
+            this.btn_volver.Click += new System.EventHandler(this.btn_volver_Click);
             // 
-            // splitter1
+            // btn_imprimir
             // 
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(348, 561);
-            this.splitter1.TabIndex = 62;
-            this.splitter1.TabStop = false;
+            this.btn_imprimir.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_imprimir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_imprimir.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_imprimir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCyan;
+            this.btn_imprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
+            this.btn_imprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_imprimir.IconChar = FontAwesome.Sharp.IconChar.Print;
+            this.btn_imprimir.IconColor = System.Drawing.Color.Black;
+            this.btn_imprimir.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btn_imprimir.IconSize = 40;
+            this.btn_imprimir.Location = new System.Drawing.Point(189, 488);
+            this.btn_imprimir.Name = "btn_imprimir";
+            this.btn_imprimir.Size = new System.Drawing.Size(141, 50);
+            this.btn_imprimir.TabIndex = 63;
+            this.btn_imprimir.Text = "Imprimir";
+            this.btn_imprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_imprimir.UseVisualStyleBackColor = true;
             // 
-            // txt_nombre
+            // btn_aumentar
             // 
-            this.txt_nombre.Location = new System.Drawing.Point(117, 36);
-            this.txt_nombre.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.Size = new System.Drawing.Size(160, 30);
-            this.txt_nombre.TabIndex = 63;
-            // 
-            // txt_ci
-            // 
-            this.txt_ci.Location = new System.Drawing.Point(117, 77);
-            this.txt_ci.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.txt_ci.Name = "txt_ci";
-            this.txt_ci.Size = new System.Drawing.Size(160, 30);
-            this.txt_ci.TabIndex = 64;
-            // 
-            // ncliente_btn
-            // 
-            this.ncliente_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ncliente_btn.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.ncliente_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ncliente_btn.Location = new System.Drawing.Point(73, 120);
-            this.ncliente_btn.Name = "ncliente_btn";
-            this.ncliente_btn.Size = new System.Drawing.Size(162, 45);
-            this.ncliente_btn.TabIndex = 65;
-            this.ncliente_btn.Text = "Nuevo cliente";
-            this.ncliente_btn.UseVisualStyleBackColor = true;
-            this.ncliente_btn.Click += new System.EventHandler(this.ncliente_btn_Click);
+            this.btn_aumentar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_aumentar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_aumentar.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_aumentar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCyan;
+            this.btn_aumentar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
+            this.btn_aumentar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_aumentar.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
+            this.btn_aumentar.IconColor = System.Drawing.Color.Black;
+            this.btn_aumentar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_aumentar.IconSize = 40;
+            this.btn_aumentar.Location = new System.Drawing.Point(477, 488);
+            this.btn_aumentar.Name = "btn_aumentar";
+            this.btn_aumentar.Size = new System.Drawing.Size(141, 50);
+            this.btn_aumentar.TabIndex = 64;
+            this.btn_aumentar.Text = "Añadir";
+            this.btn_aumentar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_aumentar.UseVisualStyleBackColor = true;
             // 
             // form_venta
             // 
@@ -405,15 +439,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Bisque;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.btn_aumentar);
+            this.Controls.Add(this.btn_imprimir);
             this.Controls.Add(this.btn_limpiar);
             this.Controls.Add(this.btn_registrar);
-            this.Controls.Add(this.btn_cancelar);
+            this.Controls.Add(this.btn_volver);
             this.Controls.Add(this.label_total);
             this.Controls.Add(this.label_nro_venta);
             this.Controls.Add(this.tabla_detalle);
             this.Controls.Add(this.combo_producto);
             this.Controls.Add(this.txt_cantidad);
-            this.Controls.Add(this.txt_punitario);
+            this.Controls.Add(this.txt_precio);
             this.Controls.Add(this.txt_subtotal);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -426,7 +462,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.splitter1);
             this.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.MaximumSize = new System.Drawing.Size(1000, 600);
@@ -454,7 +489,7 @@
         private System.Windows.Forms.DataGridView tabla_detalle;
         private System.Windows.Forms.ComboBox combo_producto;
         private System.Windows.Forms.TextBox txt_cantidad;
-        private System.Windows.Forms.TextBox txt_punitario;
+        private System.Windows.Forms.TextBox txt_precio;
         private System.Windows.Forms.TextBox txt_subtotal;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
@@ -465,10 +500,11 @@
         private System.Windows.Forms.Label label_total;
         private FontAwesome.Sharp.IconButton btn_limpiar;
         private FontAwesome.Sharp.IconButton btn_registrar;
-        private FontAwesome.Sharp.IconButton btn_cancelar;
-        private System.Windows.Forms.Splitter splitter1;
+        private FontAwesome.Sharp.IconButton btn_volver;
         private System.Windows.Forms.Button ncliente_btn;
         private System.Windows.Forms.TextBox txt_ci;
         private System.Windows.Forms.TextBox txt_nombre;
+        private FontAwesome.Sharp.IconButton btn_imprimir;
+        private FontAwesome.Sharp.IconButton btn_aumentar;
     }
 }

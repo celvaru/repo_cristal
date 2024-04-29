@@ -19,8 +19,8 @@ namespace Comercial_Cristal
 
         private void btn_ncompra_Click(object sender, EventArgs e)
         {
-            form_compra form_Compra = new form_compra();
-            form_Compra.Show();
+            form_compra form_compra = new form_compra();
+            form_compra.Show();
         }
 
         private void btn_nventa_Click(object sender, EventArgs e)
@@ -31,7 +31,8 @@ namespace Comercial_Cristal
 
         private void btn_nreporte_Click(object sender, EventArgs e)
         {
-            
+            form_reportes form_reportes = new form_reportes();
+            form_reportes.Show();
         }
     }
 }

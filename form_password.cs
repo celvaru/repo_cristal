@@ -10,20 +10,14 @@ using System.Windows.Forms;
 
 namespace Comercial_Cristal
 {
-    public partial class form_venta : Form
+    public partial class form_password : Form
     {
-        public form_venta()
+        public form_password()
         {
             InitializeComponent();
         }
 
-        private void ncliente_btn_Click(object sender, EventArgs e)
-        {
-            form_cliente form_cliente = new form_cliente();
-            form_cliente.Show();
-        }
-
-        private void btn_volver_Click(object sender, EventArgs e)
+        private void btn_cancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }

@@ -144,7 +144,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Rockwell", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(236, 44);
+            this.label2.Location = new System.Drawing.Point(245, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(438, 43);
             this.label2.TabIndex = 42;
@@ -228,6 +228,7 @@
             this.btn_pass.Text = "Cambiar contraseña";
             this.btn_pass.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_pass.UseVisualStyleBackColor = true;
+            this.btn_pass.Click += new System.EventHandler(this.btn_pass_Click);
             // 
             // form_datos
             // 

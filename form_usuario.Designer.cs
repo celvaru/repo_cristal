@@ -217,7 +217,7 @@
             this.btn_agregar.IconColor = System.Drawing.Color.Black;
             this.btn_agregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_agregar.IconSize = 40;
-            this.btn_agregar.Location = new System.Drawing.Point(695, 113);
+            this.btn_agregar.Location = new System.Drawing.Point(732, 113);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(135, 48);
             this.btn_agregar.TabIndex = 42;
@@ -237,13 +237,14 @@
             this.btn_eliminar.IconColor = System.Drawing.Color.Black;
             this.btn_eliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_eliminar.IconSize = 40;
-            this.btn_eliminar.Location = new System.Drawing.Point(695, 168);
+            this.btn_eliminar.Location = new System.Drawing.Point(732, 168);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(135, 48);
             this.btn_eliminar.TabIndex = 43;
             this.btn_eliminar.Text = "Eliminar";
             this.btn_eliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // btn_limpiar
             // 
@@ -257,7 +258,7 @@
             this.btn_limpiar.IconColor = System.Drawing.Color.Black;
             this.btn_limpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_limpiar.IconSize = 40;
-            this.btn_limpiar.Location = new System.Drawing.Point(695, 222);
+            this.btn_limpiar.Location = new System.Drawing.Point(732, 222);
             this.btn_limpiar.Name = "btn_limpiar";
             this.btn_limpiar.Size = new System.Drawing.Size(135, 48);
             this.btn_limpiar.TabIndex = 44;

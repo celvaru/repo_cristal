@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_cancelar = new FontAwesome.Sharp.IconButton();
+            this.btn_eliminar = new FontAwesome.Sharp.IconButton();
+            this.btn_agregar = new FontAwesome.Sharp.IconButton();
             this.cliente_tabla = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -39,9 +42,6 @@
             this.nombre_txt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_eliminar = new FontAwesome.Sharp.IconButton();
-            this.btn_agregar = new FontAwesome.Sharp.IconButton();
-            this.btn_cancelar = new FontAwesome.Sharp.IconButton();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cliente_tabla)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -60,38 +60,100 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Lista de clientes";
             // 
+            // btn_cancelar
+            // 
+            this.btn_cancelar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancelar.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCyan;
+            this.btn_cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
+            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancelar.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            this.btn_cancelar.IconColor = System.Drawing.Color.Black;
+            this.btn_cancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_cancelar.IconSize = 40;
+            this.btn_cancelar.Location = new System.Drawing.Point(388, 152);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Rotation = 180D;
+            this.btn_cancelar.Size = new System.Drawing.Size(146, 48);
+            this.btn_cancelar.TabIndex = 64;
+            this.btn_cancelar.Text = "Cancelar";
+            this.btn_cancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
+            // 
+            // btn_eliminar
+            // 
+            this.btn_eliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_eliminar.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_eliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCyan;
+            this.btn_eliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
+            this.btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_eliminar.IconChar = FontAwesome.Sharp.IconChar.UserMinus;
+            this.btn_eliminar.IconColor = System.Drawing.Color.Black;
+            this.btn_eliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_eliminar.IconSize = 40;
+            this.btn_eliminar.Location = new System.Drawing.Point(388, 98);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Size = new System.Drawing.Size(146, 48);
+            this.btn_eliminar.TabIndex = 63;
+            this.btn_eliminar.Text = "Eliminar";
+            this.btn_eliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_eliminar.UseVisualStyleBackColor = true;
+            // 
+            // btn_agregar
+            // 
+            this.btn_agregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_agregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_agregar.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_agregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCyan;
+            this.btn_agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
+            this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_agregar.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btn_agregar.IconColor = System.Drawing.Color.Black;
+            this.btn_agregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_agregar.IconSize = 40;
+            this.btn_agregar.Location = new System.Drawing.Point(388, 43);
+            this.btn_agregar.Name = "btn_agregar";
+            this.btn_agregar.Size = new System.Drawing.Size(146, 48);
+            this.btn_agregar.TabIndex = 62;
+            this.btn_agregar.Text = "Agregar";
+            this.btn_agregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_agregar.UseVisualStyleBackColor = true;
+            // 
             // cliente_tabla
             // 
             this.cliente_tabla.AllowUserToOrderColumns = true;
             this.cliente_tabla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.cliente_tabla.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.cliente_tabla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.cliente_tabla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.cliente_tabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.cliente_tabla.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.cliente_tabla.DefaultCellStyle = dataGridViewCellStyle5;
             this.cliente_tabla.Location = new System.Drawing.Point(26, 43);
             this.cliente_tabla.Name = "cliente_tabla";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.cliente_tabla.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.cliente_tabla.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.cliente_tabla.Size = new System.Drawing.Size(346, 194);
             this.cliente_tabla.TabIndex = 41;
             // 
@@ -150,67 +212,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Nombre:";
             // 
-            // btn_eliminar
-            // 
-            this.btn_eliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_eliminar.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.btn_eliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCyan;
-            this.btn_eliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
-            this.btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_eliminar.IconChar = FontAwesome.Sharp.IconChar.UserMinus;
-            this.btn_eliminar.IconColor = System.Drawing.Color.Black;
-            this.btn_eliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_eliminar.IconSize = 40;
-            this.btn_eliminar.Location = new System.Drawing.Point(388, 98);
-            this.btn_eliminar.Name = "btn_eliminar";
-            this.btn_eliminar.Size = new System.Drawing.Size(146, 48);
-            this.btn_eliminar.TabIndex = 63;
-            this.btn_eliminar.Text = "Eliminar";
-            this.btn_eliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_eliminar.UseVisualStyleBackColor = true;
-            // 
-            // btn_agregar
-            // 
-            this.btn_agregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_agregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_agregar.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.btn_agregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCyan;
-            this.btn_agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
-            this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_agregar.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.btn_agregar.IconColor = System.Drawing.Color.Black;
-            this.btn_agregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_agregar.IconSize = 40;
-            this.btn_agregar.Location = new System.Drawing.Point(388, 43);
-            this.btn_agregar.Name = "btn_agregar";
-            this.btn_agregar.Size = new System.Drawing.Size(146, 48);
-            this.btn_agregar.TabIndex = 62;
-            this.btn_agregar.Text = "Agregar";
-            this.btn_agregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_agregar.UseVisualStyleBackColor = true;
-            // 
-            // btn_cancelar
-            // 
-            this.btn_cancelar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cancelar.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.btn_cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCyan;
-            this.btn_cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
-            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cancelar.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
-            this.btn_cancelar.IconColor = System.Drawing.Color.Black;
-            this.btn_cancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_cancelar.IconSize = 40;
-            this.btn_cancelar.Location = new System.Drawing.Point(388, 152);
-            this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Rotation = 180D;
-            this.btn_cancelar.Size = new System.Drawing.Size(146, 48);
-            this.btn_cancelar.TabIndex = 64;
-            this.btn_cancelar.Text = "Cancelar";
-            this.btn_cancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_cancelar.UseVisualStyleBackColor = true;
-            // 
             // form_cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
@@ -222,6 +223,8 @@
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.MaximumSize = new System.Drawing.Size(599, 503);
+            this.MinimumSize = new System.Drawing.Size(599, 503);
             this.Name = "form_cliente";
             this.Text = "form_cliente";
             this.groupBox2.ResumeLayout(false);
