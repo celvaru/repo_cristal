@@ -10,13 +10,12 @@ using System.Windows.Forms;
 
 namespace Comercial_Cristal
 {
-    public partial class form_inventario : Form
+    public partial class form_datos : Form
     {
-        public form_inventario()
+        public form_datos()
         {
             InitializeComponent();
         }
-
 
     }
 }

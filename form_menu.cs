@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,13 +17,18 @@ namespace CeluCenter.Vistas
         public form_menu()
         {
             InitializeComponent();
+            mostrar_forms(new form_principal());
+
         }
+
         private Form formactivo = null;
         //Alternamos la vista de los formularios
         private void mostrar_forms(Form formhijo)
         {
             if (formactivo != null)
                 formactivo.Close();
+            if(formhijo.Name != "form_principal")
+                btn_menu.Enabled = true;
             formactivo = formhijo;
             formhijo.TopLevel = false;
             formhijo.FormBorderStyle = FormBorderStyle.None;
@@ -33,15 +39,81 @@ namespace CeluCenter.Vistas
             formhijo.Show();
 
         }
-
-        private void btn_ncompra_Click(object sender, EventArgs e)
+        //hace que todas las pestañas del menu estén sin seleccionar
+        private void color_base()
         {
-            mostrar_forms(new form_compra());
+            if(btn_datos.BackColor != Color.DeepSkyBlue)
+            {
+                btn_datos.BackColor = Color.DeepSkyBlue;
+                btn_datos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
+                btn_datos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
+                btn_datos.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            }
+            if (btn_hventas.BackColor != Color.DeepSkyBlue)
+            {
+                btn_hventas.BackColor = Color.DeepSkyBlue;
+                btn_hventas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
+                btn_hventas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
+                btn_hventas.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            }
+                
+            if (btn_inventario.BackColor != Color.DeepSkyBlue)
+            {
+                btn_inventario.BackColor = Color.DeepSkyBlue;
+                btn_inventario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
+                btn_inventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
+                btn_inventario.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            }
+               
+            if (btn_usuario.BackColor != Color.DeepSkyBlue)
+            {
+                btn_usuario.BackColor = Color.DeepSkyBlue;
+                btn_usuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
+                btn_usuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
+                btn_usuario.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            }
+                
+        }
+        //alterna la selección de las pestañas del menu
+        private void seleccionar_boton(Button seleccion)
+        {
+            if (seleccion.BackColor == Color.DeepSkyBlue)
+            {
+                color_base();
+                seleccion.BackColor = Color.LightCyan;
+                seleccion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+                seleccion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PowderBlue;
+                seleccion.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            }
+        }
+        private void btn_datos_Click(object sender, EventArgs e)
+        {
+            mostrar_forms(new form_datos());
+            seleccionar_boton(btn_datos);
         }
 
-        private void btn_nventa_Click(object sender, EventArgs e)
+        private void btn_hventas_Click(object sender, EventArgs e)
         {
-            mostrar_forms(new form_venta());
+            mostrar_forms(new form_hventas());
+            seleccionar_boton(btn_hventas);
+        }
+
+        private void btn_inventario_Click(object sender, EventArgs e)
+        {
+            mostrar_forms(new form_inventario());
+            seleccionar_boton(btn_inventario);
+        }
+
+        private void btn_usuario_Click(object sender, EventArgs e)
+        {
+            mostrar_forms(new form_usuario());
+            seleccionar_boton(btn_usuario);
+        }
+
+        private void btn_menu_Click(object sender, EventArgs e)
+        {
+            mostrar_forms(new form_principal());
+            color_base();
         }
         //botones del menu
 

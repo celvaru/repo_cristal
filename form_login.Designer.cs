@@ -44,12 +44,12 @@
             this.btn_salir.AccessibleDescription = "Ingresar";
             this.btn_salir.AccessibleName = "Ingresar";
             this.btn_salir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_salir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_salir.FlatAppearance.BorderSize = 2;
-            this.btn_salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
-            this.btn_salir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_salir.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_salir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_salir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_salir.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_salir.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_salir.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_salir.Location = new System.Drawing.Point(496, 145);
             this.btn_salir.Name = "btn_salir";
             this.btn_salir.Size = new System.Drawing.Size(90, 35);
@@ -65,12 +65,13 @@
             this.btn_ingresar.AccessibleDescription = "Ingresar";
             this.btn_ingresar.AccessibleName = "Ingresar";
             this.btn_ingresar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_ingresar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_ingresar.FlatAppearance.BorderSize = 2;
-            this.btn_ingresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
-            this.btn_ingresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_ingresar.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ingresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_ingresar.BackColor = System.Drawing.Color.Bisque;
+            this.btn_ingresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ingresar.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_ingresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_ingresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ingresar.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ingresar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_ingresar.Location = new System.Drawing.Point(336, 145);
             this.btn_ingresar.Name = "btn_ingresar";
             this.btn_ingresar.Size = new System.Drawing.Size(90, 35);
@@ -78,7 +79,7 @@
             this.btn_ingresar.Text = "Ingresar";
             this.btn_ingresar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_ingresar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_ingresar.UseVisualStyleBackColor = true;
+            this.btn_ingresar.UseVisualStyleBackColor = false;
             this.btn_ingresar.Click += new System.EventHandler(this.btn_ingresar_Click);
             // 
             // txt_password
@@ -93,10 +94,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(227, 95);
+            this.label3.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(206, 95);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 23);
+            this.label3.Size = new System.Drawing.Size(126, 23);
             this.label3.TabIndex = 10;
             this.label3.Text = "Contraseña:";
             // 
@@ -111,16 +112,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(256, 38);
+            this.label2.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(242, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 23);
+            this.label2.Size = new System.Drawing.Size(90, 23);
             this.label2.TabIndex = 8;
             this.label2.Text = "Usuario:";
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel1.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -131,8 +132,8 @@
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(12, 153);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(175, 27);
@@ -144,6 +145,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Bisque;
             this.ClientSize = new System.Drawing.Size(612, 199);
             this.Controls.Add(this.btn_salir);
             this.Controls.Add(this.btn_ingresar);
@@ -156,6 +158,7 @@
             this.MaximumSize = new System.Drawing.Size(612, 199);
             this.MinimumSize = new System.Drawing.Size(612, 199);
             this.Name = "form_login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

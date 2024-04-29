@@ -12,3 +12,10 @@ C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\obj\Debug\Comercial Cristal
 C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\obj\Debug\Comercial_Cristal.form_cliente.resources
 C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\obj\Debug\Comercial_Cristal.form_compra.resources
 C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\obj\Debug\Comercial_Cristal.form_venta.resources
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\obj\Debug\Comercial_Cristal.form_hventas.resources
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\obj\Debug\Comercial_Cristal.form_inventario.resources
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\obj\Debug\Comercial_Cristal.form_usuario.resources
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\obj\Debug\Vistas.csproj.CopyComplete
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\obj\Debug\Comercial_Cristal.form_datos.resources
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\obj\Debug\Comercial_Cristal.form_principal.resources
