@@ -1,0 +1,6 @@
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\obj\Debug\Comercial Cristal.csproj.AssemblyReference.cache
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\obj\Debug\Comercial_Cristal.form_login.resources
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\obj\Debug\CeluCenter.Vistas.form_menu.resources
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\obj\Debug\Comercial_Cristal.Properties.Resources.resources
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\obj\Debug\Comercial Cristal.csproj.GenerateResource.cache
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\obj\Debug\Comercial Cristal.csproj.CoreCompileInputs.cache
