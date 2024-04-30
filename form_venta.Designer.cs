@@ -31,12 +31,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_venta));
             this.date_fecha = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ncliente_btn = new System.Windows.Forms.Button();
             this.txt_ci = new System.Windows.Forms.TextBox();
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -59,6 +59,7 @@
             this.btn_volver = new FontAwesome.Sharp.IconButton();
             this.btn_imprimir = new FontAwesome.Sharp.IconButton();
             this.btn_aumentar = new FontAwesome.Sharp.IconButton();
+            this.btn_cliente = new FontAwesome.Sharp.IconButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_detalle)).BeginInit();
             this.SuspendLayout();
@@ -111,7 +112,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.ncliente_btn);
+            this.groupBox1.Controls.Add(this.btn_cliente);
             this.groupBox1.Controls.Add(this.txt_ci);
             this.groupBox1.Controls.Add(this.txt_nombre);
             this.groupBox1.Controls.Add(this.label4);
@@ -125,19 +126,6 @@
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del cliente";
-            // 
-            // ncliente_btn
-            // 
-            this.ncliente_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ncliente_btn.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.ncliente_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ncliente_btn.Location = new System.Drawing.Point(73, 120);
-            this.ncliente_btn.Name = "ncliente_btn";
-            this.ncliente_btn.Size = new System.Drawing.Size(162, 45);
-            this.ncliente_btn.TabIndex = 65;
-            this.ncliente_btn.Text = "Nuevo cliente";
-            this.ncliente_btn.UseVisualStyleBackColor = true;
-            this.ncliente_btn.Click += new System.EventHandler(this.ncliente_btn_Click);
             // 
             // txt_ci
             // 
@@ -433,6 +421,27 @@
             this.btn_aumentar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_aumentar.UseVisualStyleBackColor = true;
             // 
+            // btn_cliente
+            // 
+            this.btn_cliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_cliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cliente.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_cliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCyan;
+            this.btn_cliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
+            this.btn_cliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cliente.IconChar = FontAwesome.Sharp.IconChar.PersonCirclePlus;
+            this.btn_cliente.IconColor = System.Drawing.Color.Black;
+            this.btn_cliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_cliente.IconSize = 40;
+            this.btn_cliente.Location = new System.Drawing.Point(73, 115);
+            this.btn_cliente.Name = "btn_cliente";
+            this.btn_cliente.Size = new System.Drawing.Size(150, 57);
+            this.btn_cliente.TabIndex = 65;
+            this.btn_cliente.Text = "Nuevo cliente";
+            this.btn_cliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_cliente.UseVisualStyleBackColor = true;
+            this.btn_cliente.Click += new System.EventHandler(this.btn_cliente_Click);
+            // 
             // form_venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
@@ -463,11 +472,13 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.MaximumSize = new System.Drawing.Size(1000, 600);
             this.MinimumSize = new System.Drawing.Size(1000, 600);
             this.Name = "form_venta";
-            this.Text = "form_venta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "COMERCIAL CRISTAL - Nueva venta";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_detalle)).EndInit();
@@ -501,10 +512,10 @@
         private FontAwesome.Sharp.IconButton btn_limpiar;
         private FontAwesome.Sharp.IconButton btn_registrar;
         private FontAwesome.Sharp.IconButton btn_volver;
-        private System.Windows.Forms.Button ncliente_btn;
         private System.Windows.Forms.TextBox txt_ci;
         private System.Windows.Forms.TextBox txt_nombre;
         private FontAwesome.Sharp.IconButton btn_imprimir;
         private FontAwesome.Sharp.IconButton btn_aumentar;
+        private FontAwesome.Sharp.IconButton btn_cliente;
     }
 }

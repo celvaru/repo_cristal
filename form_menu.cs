@@ -115,6 +115,11 @@ namespace CeluCenter.Vistas
             mostrar_forms(new form_principal());
             color_base();
         }
+
+        private void btn_cerrar_sesion_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         //botones del menu
 
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_password));
             this.btn_cancelar = new FontAwesome.Sharp.IconButton();
             this.btn_guardar = new FontAwesome.Sharp.IconButton();
             this.label5 = new System.Windows.Forms.Label();
@@ -104,7 +105,7 @@
             this.txt_ci.MaximumSize = new System.Drawing.Size(400, 28);
             this.txt_ci.Name = "txt_ci";
             this.txt_ci.PasswordChar = '*';
-            this.txt_ci.Size = new System.Drawing.Size(260, 28);
+            this.txt_ci.Size = new System.Drawing.Size(260, 30);
             this.txt_ci.TabIndex = 53;
             // 
             // txt_apellido
@@ -114,7 +115,7 @@
             this.txt_apellido.MaximumSize = new System.Drawing.Size(400, 28);
             this.txt_apellido.Name = "txt_apellido";
             this.txt_apellido.PasswordChar = '*';
-            this.txt_apellido.Size = new System.Drawing.Size(260, 28);
+            this.txt_apellido.Size = new System.Drawing.Size(260, 30);
             this.txt_apellido.TabIndex = 52;
             // 
             // label3
@@ -133,7 +134,7 @@
             this.txt_nombre.MaximumSize = new System.Drawing.Size(400, 28);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.PasswordChar = '*';
-            this.txt_nombre.Size = new System.Drawing.Size(260, 28);
+            this.txt_nombre.Size = new System.Drawing.Size(260, 30);
             this.txt_nombre.TabIndex = 50;
             // 
             // label2
@@ -184,11 +185,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.MaximumSize = new System.Drawing.Size(640, 500);
             this.MinimumSize = new System.Drawing.Size(640, 500);
             this.Name = "form_password";
-            this.Text = "form_password";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "COMERCIAL CRISTAL - Cambiar contraseña";
             this.ResumeLayout(false);
             this.PerformLayout();
 

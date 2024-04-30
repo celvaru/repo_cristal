@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_reportes));
             this.btn_documento = new FontAwesome.Sharp.IconButton();
             this.btn_volver = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
@@ -54,7 +55,7 @@
             this.btn_documento.IconColor = System.Drawing.Color.Black;
             this.btn_documento.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_documento.IconSize = 40;
-            this.btn_documento.Location = new System.Drawing.Point(295, 578);
+            this.btn_documento.Location = new System.Drawing.Point(295, 528);
             this.btn_documento.Name = "btn_documento";
             this.btn_documento.Size = new System.Drawing.Size(162, 58);
             this.btn_documento.TabIndex = 64;
@@ -74,7 +75,7 @@
             this.btn_volver.IconColor = System.Drawing.Color.Black;
             this.btn_volver.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_volver.IconSize = 40;
-            this.btn_volver.Location = new System.Drawing.Point(68, 578);
+            this.btn_volver.Location = new System.Drawing.Point(68, 528);
             this.btn_volver.Name = "btn_volver";
             this.btn_volver.Rotation = 180D;
             this.btn_volver.Size = new System.Drawing.Size(162, 58);
@@ -96,7 +97,7 @@
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconButton1.IconSize = 40;
-            this.iconButton1.Location = new System.Drawing.Point(525, 578);
+            this.iconButton1.Location = new System.Drawing.Point(525, 528);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(162, 58);
             this.iconButton1.TabIndex = 66;
@@ -177,9 +178,9 @@
             // 
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(68, 152);
+            this.dataGridView1.Location = new System.Drawing.Point(68, 134);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(619, 402);
+            this.dataGridView1.Size = new System.Drawing.Size(619, 370);
             this.dataGridView1.TabIndex = 72;
             // 
             // combo_anio
@@ -221,7 +222,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Bisque;
-            this.ClientSize = new System.Drawing.Size(754, 661);
+            this.ClientSize = new System.Drawing.Size(754, 611);
             this.Controls.Add(this.combo_anio);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView1);
@@ -234,11 +235,13 @@
             this.Controls.Add(this.btn_volver);
             this.Controls.Add(this.btn_documento);
             this.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.MaximumSize = new System.Drawing.Size(770, 700);
-            this.MinimumSize = new System.Drawing.Size(770, 700);
+            this.MaximumSize = new System.Drawing.Size(770, 650);
+            this.MinimumSize = new System.Drawing.Size(770, 650);
             this.Name = "form_reportes";
-            this.Text = "form_reportes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "COMERCIAL CRISTAL - Reportes";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

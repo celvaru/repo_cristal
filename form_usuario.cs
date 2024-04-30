@@ -19,7 +19,14 @@ namespace Comercial_Cristal
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
-
+            if(tabla_usuarios.SelectedRows.Count == 1)
+            {
+                MessageBox.Show("¿Está seguro de eliminar el usuario seleccionado?\nEsta acción no se puede deshacer","Confirmación",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
+            }
+            else
+            {
+                MessageBox.Show("Por favor seleccione un usuario","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
     }
 }

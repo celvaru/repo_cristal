@@ -123,6 +123,7 @@
             this.btn_cerrar_sesion.Text = "Cerrar Sesión";
             this.btn_cerrar_sesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_cerrar_sesion.UseVisualStyleBackColor = true;
+            this.btn_cerrar_sesion.Click += new System.EventHandler(this.btn_cerrar_sesion_Click);
             // 
             // btn_datos
             // 
