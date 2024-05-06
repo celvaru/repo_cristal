@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -37,7 +38,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_buscar = new FontAwesome.Sharp.IconButton();
+            this.set_ventas_comercial_cristal = new Comercial_Cristal.set_ventas_comercial_cristal();
+            this.ventaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ventaTableAdapter = new Comercial_Cristal.set_ventas_comercial_cristalTableAdapters.VentaTableAdapter();
+            this.numventaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ciclienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ciDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ventas_tabla)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.set_ventas_comercial_cristal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ventaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // ventas_tabla
@@ -48,6 +59,7 @@
             this.ventas_tabla.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.ventas_tabla.AutoGenerateColumns = false;
             this.ventas_tabla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ventas_tabla.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -59,6 +71,13 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.ventas_tabla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.ventas_tabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ventas_tabla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.numventaDataGridViewTextBoxColumn,
+            this.fechaDataGridViewTextBoxColumn,
+            this.ciclienteDataGridViewTextBoxColumn,
+            this.totalDataGridViewTextBoxColumn,
+            this.ciDataGridViewTextBoxColumn});
+            this.ventas_tabla.DataSource = this.ventaBindingSource;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -95,7 +114,7 @@
             this.combo_buscar.Items.AddRange(new object[] {
             "Nro. Compra",
             "Fecha",
-            "Producto"});
+            "CI cliente"});
             this.combo_buscar.Location = new System.Drawing.Point(173, 108);
             this.combo_buscar.Name = "combo_buscar";
             this.combo_buscar.Size = new System.Drawing.Size(162, 29);
@@ -143,6 +162,55 @@
             this.btn_buscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_buscar.UseVisualStyleBackColor = true;
             // 
+            // set_ventas_comercial_cristal
+            // 
+            this.set_ventas_comercial_cristal.DataSetName = "set_ventas_comercial_cristal";
+            this.set_ventas_comercial_cristal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ventaBindingSource
+            // 
+            this.ventaBindingSource.DataMember = "Venta";
+            this.ventaBindingSource.DataSource = this.set_ventas_comercial_cristal;
+            // 
+            // ventaTableAdapter
+            // 
+            this.ventaTableAdapter.ClearBeforeFill = true;
+            // 
+            // numventaDataGridViewTextBoxColumn
+            // 
+            this.numventaDataGridViewTextBoxColumn.DataPropertyName = "num_venta";
+            this.numventaDataGridViewTextBoxColumn.HeaderText = "Nº de venta";
+            this.numventaDataGridViewTextBoxColumn.Name = "numventaDataGridViewTextBoxColumn";
+            this.numventaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechaDataGridViewTextBoxColumn
+            // 
+            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "fecha";
+            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
+            this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ciclienteDataGridViewTextBoxColumn
+            // 
+            this.ciclienteDataGridViewTextBoxColumn.DataPropertyName = "ci_cliente";
+            this.ciclienteDataGridViewTextBoxColumn.HeaderText = "CI cliente";
+            this.ciclienteDataGridViewTextBoxColumn.Name = "ciclienteDataGridViewTextBoxColumn";
+            this.ciclienteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // totalDataGridViewTextBoxColumn
+            // 
+            this.totalDataGridViewTextBoxColumn.DataPropertyName = "total";
+            this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
+            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
+            this.totalDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ciDataGridViewTextBoxColumn
+            // 
+            this.ciDataGridViewTextBoxColumn.DataPropertyName = "ci";
+            this.ciDataGridViewTextBoxColumn.HeaderText = "CI cajero";
+            this.ciDataGridViewTextBoxColumn.Name = "ciDataGridViewTextBoxColumn";
+            this.ciDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // form_hventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
@@ -160,7 +228,10 @@
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "form_hventas";
             this.Text = "form_hventas";
+            this.Load += new System.EventHandler(this.form_hventas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ventas_tabla)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.set_ventas_comercial_cristal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ventaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,5 +245,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton btn_buscar;
+        private set_ventas_comercial_cristal set_ventas_comercial_cristal;
+        private System.Windows.Forms.BindingSource ventaBindingSource;
+        private set_ventas_comercial_cristalTableAdapters.VentaTableAdapter ventaTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numventaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ciclienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ciDataGridViewTextBoxColumn;
     }
 }

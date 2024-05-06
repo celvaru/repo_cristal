@@ -16,5 +16,12 @@ namespace Comercial_Cristal
         {
             InitializeComponent();
         }
+
+        private void form_hventas_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'set_ventas_comercial_cristal.Venta' Puede moverla o quitarla según sea necesario.
+            this.ventaTableAdapter.Fill(this.set_ventas_comercial_cristal.Venta);
+
+        }
     }
 }

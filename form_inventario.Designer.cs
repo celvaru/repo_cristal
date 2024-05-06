@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabla_inventario = new System.Windows.Forms.DataGridView();
+            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.set_comercial_cristal = new Comercial_Cristal.set_comercial_cristal();
             this.txt_metros = new System.Windows.Forms.TextBox();
             this.txt_rollos = new System.Windows.Forms.TextBox();
             this.txt_codigo = new System.Windows.Forms.TextBox();
@@ -41,19 +44,27 @@
             this.txt_ancho = new System.Windows.Forms.TextBox();
             this.txt_producto = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.buscar_txt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_limpiar = new FontAwesome.Sharp.IconButton();
             this.btn_eliminar = new FontAwesome.Sharp.IconButton();
             this.btn_buscar = new FontAwesome.Sharp.IconButton();
-            this.combo_color = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_precio = new System.Windows.Forms.TextBox();
             this.txt_metros_rollo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.productoTableAdapter = new Comercial_Cristal.set_comercial_cristalTableAdapters.ProductoTableAdapter();
+            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreproductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.anchoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rollosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.metrorolloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.metrosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_inventario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.set_comercial_cristal)).BeginInit();
             this.SuspendLayout();
             // 
             // tabla_inventario
@@ -64,43 +75,63 @@
             this.tabla_inventario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabla_inventario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.tabla_inventario.AutoGenerateColumns = false;
+            this.tabla_inventario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tabla_inventario.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.PaleGoldenrod;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tabla_inventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.PaleGoldenrod;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabla_inventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.tabla_inventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.PaleGoldenrod;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tabla_inventario.DefaultCellStyle = dataGridViewCellStyle8;
+            this.tabla_inventario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codigoDataGridViewTextBoxColumn,
+            this.nombreproductoDataGridViewTextBoxColumn,
+            this.precioDataGridViewTextBoxColumn,
+            this.anchoDataGridViewTextBoxColumn,
+            this.rollosDataGridViewTextBoxColumn,
+            this.metrorolloDataGridViewTextBoxColumn,
+            this.metrosDataGridViewTextBoxColumn});
+            this.tabla_inventario.DataSource = this.productoBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.PaleGoldenrod;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tabla_inventario.DefaultCellStyle = dataGridViewCellStyle2;
             this.tabla_inventario.Location = new System.Drawing.Point(42, 309);
             this.tabla_inventario.Name = "tabla_inventario";
             this.tabla_inventario.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.PaleGoldenrod;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tabla_inventario.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.PaleGoldenrod;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabla_inventario.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.tabla_inventario.Size = new System.Drawing.Size(835, 195);
             this.tabla_inventario.TabIndex = 58;
+            // 
+            // productoBindingSource
+            // 
+            this.productoBindingSource.DataMember = "Producto";
+            this.productoBindingSource.DataSource = this.set_comercial_cristal;
+            // 
+            // set_comercial_cristal
+            // 
+            this.set_comercial_cristal.DataSetName = "set_comercial_cristal";
+            this.set_comercial_cristal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txt_metros
             // 
             this.txt_metros.Enabled = false;
-            this.txt_metros.Location = new System.Drawing.Point(528, 259);
+            this.txt_metros.Location = new System.Drawing.Point(528, 258);
             this.txt_metros.Name = "txt_metros";
             this.txt_metros.Size = new System.Drawing.Size(171, 30);
             this.txt_metros.TabIndex = 56;
@@ -116,7 +147,7 @@
             // txt_codigo
             // 
             this.txt_codigo.Enabled = false;
-            this.txt_codigo.Location = new System.Drawing.Point(528, 187);
+            this.txt_codigo.Location = new System.Drawing.Point(528, 186);
             this.txt_codigo.Name = "txt_codigo";
             this.txt_codigo.Size = new System.Drawing.Size(171, 30);
             this.txt_codigo.TabIndex = 53;
@@ -125,7 +156,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Enabled = false;
-            this.label7.Location = new System.Drawing.Point(440, 262);
+            this.label7.Location = new System.Drawing.Point(440, 261);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 21);
             this.label7.TabIndex = 51;
@@ -135,7 +166,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Enabled = false;
-            this.label8.Location = new System.Drawing.Point(403, 226);
+            this.label8.Location = new System.Drawing.Point(403, 225);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(119, 21);
             this.label8.TabIndex = 50;
@@ -153,7 +184,7 @@
             // txt_ancho
             // 
             this.txt_ancho.Enabled = false;
-            this.txt_ancho.Location = new System.Drawing.Point(528, 223);
+            this.txt_ancho.Location = new System.Drawing.Point(528, 222);
             this.txt_ancho.Name = "txt_ancho";
             this.txt_ancho.Size = new System.Drawing.Size(171, 30);
             this.txt_ancho.TabIndex = 48;
@@ -174,20 +205,11 @@
             this.label4.TabIndex = 43;
             this.label4.Text = "Rollos:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(392, 153);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 21);
-            this.label3.TabIndex = 42;
-            this.label3.Text = "Color/patrón:";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Enabled = false;
-            this.label1.Location = new System.Drawing.Point(440, 190);
+            this.label1.Location = new System.Drawing.Point(440, 189);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 21);
             this.label1.TabIndex = 41;
@@ -271,19 +293,6 @@
             this.btn_buscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_buscar.UseVisualStyleBackColor = true;
             // 
-            // combo_color
-            // 
-            this.combo_color.FormattingEnabled = true;
-            this.combo_color.Items.AddRange(new object[] {
-            "Nro. Compra",
-            "Fecha",
-            "Producto"});
-            this.combo_color.Location = new System.Drawing.Point(528, 150);
-            this.combo_color.Name = "combo_color";
-            this.combo_color.Size = new System.Drawing.Size(171, 29);
-            this.combo_color.TabIndex = 65;
-            this.combo_color.Text = "Seleccione";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -318,6 +327,61 @@
             this.label6.TabIndex = 68;
             this.label6.Text = "Metros por rollo:";
             // 
+            // productoTableAdapter
+            // 
+            this.productoTableAdapter.ClearBeforeFill = true;
+            // 
+            // codigoDataGridViewTextBoxColumn
+            // 
+            this.codigoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "codigo";
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
+            this.codigoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codigoDataGridViewTextBoxColumn.Width = 101;
+            // 
+            // nombreproductoDataGridViewTextBoxColumn
+            // 
+            this.nombreproductoDataGridViewTextBoxColumn.DataPropertyName = "nombre_producto";
+            this.nombreproductoDataGridViewTextBoxColumn.HeaderText = "Producto";
+            this.nombreproductoDataGridViewTextBoxColumn.Name = "nombreproductoDataGridViewTextBoxColumn";
+            this.nombreproductoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // anchoDataGridViewTextBoxColumn
+            // 
+            this.anchoDataGridViewTextBoxColumn.DataPropertyName = "ancho";
+            this.anchoDataGridViewTextBoxColumn.HeaderText = "Ancho";
+            this.anchoDataGridViewTextBoxColumn.Name = "anchoDataGridViewTextBoxColumn";
+            this.anchoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rollosDataGridViewTextBoxColumn
+            // 
+            this.rollosDataGridViewTextBoxColumn.DataPropertyName = "rollos";
+            this.rollosDataGridViewTextBoxColumn.HeaderText = "Nº rollos";
+            this.rollosDataGridViewTextBoxColumn.Name = "rollosDataGridViewTextBoxColumn";
+            this.rollosDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // metrorolloDataGridViewTextBoxColumn
+            // 
+            this.metrorolloDataGridViewTextBoxColumn.DataPropertyName = "metro_rollo";
+            this.metrorolloDataGridViewTextBoxColumn.HeaderText = "Metros por rollo";
+            this.metrorolloDataGridViewTextBoxColumn.Name = "metrorolloDataGridViewTextBoxColumn";
+            this.metrorolloDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // metrosDataGridViewTextBoxColumn
+            // 
+            this.metrosDataGridViewTextBoxColumn.DataPropertyName = "metros";
+            this.metrosDataGridViewTextBoxColumn.HeaderText = "Nº metros";
+            this.metrosDataGridViewTextBoxColumn.Name = "metrosDataGridViewTextBoxColumn";
+            this.metrosDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // form_inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
@@ -328,7 +392,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_precio);
-            this.Controls.Add(this.combo_color);
             this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.btn_limpiar);
             this.Controls.Add(this.btn_eliminar);
@@ -342,7 +405,6 @@
             this.Controls.Add(this.txt_ancho);
             this.Controls.Add(this.txt_producto);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buscar_txt);
             this.Controls.Add(this.label2);
@@ -351,7 +413,10 @@
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "form_inventario";
             this.Text = "form_inventario";
+            this.Load += new System.EventHandler(this.form_inventario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tabla_inventario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.set_comercial_cristal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -369,17 +434,25 @@
         private System.Windows.Forms.TextBox txt_ancho;
         private System.Windows.Forms.TextBox txt_producto;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox buscar_txt;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton btn_limpiar;
         private FontAwesome.Sharp.IconButton btn_eliminar;
         private FontAwesome.Sharp.IconButton btn_buscar;
-        private System.Windows.Forms.ComboBox combo_color;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_precio;
         private System.Windows.Forms.TextBox txt_metros_rollo;
         private System.Windows.Forms.Label label6;
+        private set_comercial_cristal set_comercial_cristal;
+        private System.Windows.Forms.BindingSource productoBindingSource;
+        private set_comercial_cristalTableAdapters.ProductoTableAdapter productoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreproductoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn anchoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rollosDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn metrorolloDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn metrosDataGridViewTextBoxColumn;
     }
 }

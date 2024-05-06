@@ -21,15 +21,16 @@ namespace CeluCenter.Vistas
 
         }
 
-        private Form formactivo = null;
+        private Form form_activo = null;
+        
         //Alternamos la vista de los formularios
         private void mostrar_forms(Form formhijo)
         {
-            if (formactivo != null)
-                formactivo.Close();
+            if (form_activo != null)
+                form_activo.Close();
             if(formhijo.Name != "form_principal")
                 btn_menu.Enabled = true;
-            formactivo = formhijo;
+            form_activo = formhijo;
             formhijo.TopLevel = false;
             formhijo.FormBorderStyle = FormBorderStyle.None;
             formhijo.Dock = DockStyle.Fill;

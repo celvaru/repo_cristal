@@ -1,12 +1,5 @@
 ﻿using CeluCenter.Vistas;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Comercial_Cristal
@@ -39,5 +32,15 @@ namespace Comercial_Cristal
             form_cliente form_cliente = new form_cliente();
             form_cliente.Show();
         }
+
+        //cargar datos en la tabla
+        private void form_venta_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'producto_comercial_cristal.Producto' Puede moverla o quitarla según sea necesario.
+            this.productoTableAdapter.Fill(this.producto_comercial_cristal.Producto);
+            this.detalleTableAdapter.Fill(this.detalle_comercial_cristal.Detalle);
+
+        }
+        //mostrar datos en campos
     }
 }

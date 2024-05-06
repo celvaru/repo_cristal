@@ -31,5 +31,12 @@ namespace Comercial_Cristal
         {
             this.Close();
         }
+
+        private void form_cliente_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'set_cilente_comercial_cristal.Cliente' Puede moverla o quitarla según sea necesario.
+            this.clienteTableAdapter.Fill(this.set_cilente_comercial_cristal.Cliente);
+
+        }
     }
 }

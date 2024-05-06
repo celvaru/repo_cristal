@@ -17,6 +17,11 @@ namespace Comercial_Cristal
             InitializeComponent();
         }
 
+        private void form_inventario_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'set_comercial_cristal.Producto' Puede moverla o quitarla según sea necesario.
+            this.productoTableAdapter.Fill(this.set_comercial_cristal.Producto);
 
+        }
     }
 }

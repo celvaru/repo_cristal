@@ -1,0 +1,12 @@
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Modelos\bin\Debug\Modelos.dll.config
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Modelos\bin\Debug\Modelos.dll
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Modelos\bin\Debug\Modelos.pdb
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Modelos\bin\Debug\EntityFramework.dll
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Modelos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Modelos\bin\Debug\EntityFramework.xml
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Modelos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Modelos\obj\Debug\Modelos.csproj.AssemblyReference.cache
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Modelos\obj\Debug\Modelos.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Modelos\obj\Debug\Modelos.csproj.CopyComplete
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Modelos\obj\Debug\Modelos.dll
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Modelos\obj\Debug\Modelos.pdb

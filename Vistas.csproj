@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,12 +36,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>packages\FontAwesome.Sharp.6.3.0\lib\net48\FontAwesome.Sharp.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -53,6 +63,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="detalle_comercial_cristal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>detalle_comercial_cristal.xsd</DependentUpon>
+    </Compile>
     <Compile Include="form_cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,8 +140,43 @@
     <Compile Include="form_venta.Designer.cs">
       <DependentUpon>form_venta.cs</DependentUpon>
     </Compile>
+    <Compile Include="producto_comercial_cristal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>producto_comercial_cristal.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="set_cilente_comercial_cristal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>set_cilente_comercial_cristal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="set_comercial_cristal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>set_comercial_cristal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="set_detalle_comercial_cristal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>set_detalle_comercial_cristal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="set_usuarios_comercial_cristal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>set_usuarios_comercial_cristal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="set_ventas_comercial_cristal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>set_ventas_comercial_cristal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="set_venta_comercial_cristal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>set_venta_comercial_cristal.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="form_cliente.resx">
       <DependentUpon>form_cliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,7 +222,29 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="detalle_comercial_cristal.xsc">
+      <DependentUpon>detalle_comercial_cristal.xsd</DependentUpon>
+    </None>
+    <None Include="detalle_comercial_cristal.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>detalle_comercial_cristal.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="detalle_comercial_cristal.xss">
+      <DependentUpon>detalle_comercial_cristal.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
+    <None Include="producto_comercial_cristal.xsc">
+      <DependentUpon>producto_comercial_cristal.xsd</DependentUpon>
+    </None>
+    <None Include="producto_comercial_cristal.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>producto_comercial_cristal.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="producto_comercial_cristal.xss">
+      <DependentUpon>producto_comercial_cristal.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -182,9 +254,93 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="set_cilente_comercial_cristal.xsc">
+      <DependentUpon>set_cilente_comercial_cristal.xsd</DependentUpon>
+    </None>
+    <None Include="set_cilente_comercial_cristal.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>set_cilente_comercial_cristal.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="set_cilente_comercial_cristal.xss">
+      <DependentUpon>set_cilente_comercial_cristal.xsd</DependentUpon>
+    </None>
+    <None Include="set_comercial_cristal.xsc">
+      <DependentUpon>set_comercial_cristal.xsd</DependentUpon>
+    </None>
+    <None Include="set_comercial_cristal.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>set_comercial_cristal.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="set_comercial_cristal.xss">
+      <DependentUpon>set_comercial_cristal.xsd</DependentUpon>
+    </None>
+    <None Include="set_detalle_comercial_cristal.xsc">
+      <DependentUpon>set_detalle_comercial_cristal.xsd</DependentUpon>
+    </None>
+    <None Include="set_detalle_comercial_cristal.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>set_detalle_comercial_cristal.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="set_detalle_comercial_cristal.xss">
+      <DependentUpon>set_detalle_comercial_cristal.xsd</DependentUpon>
+    </None>
+    <None Include="set_usuarios_comercial_cristal.xsc">
+      <DependentUpon>set_usuarios_comercial_cristal.xsd</DependentUpon>
+    </None>
+    <None Include="set_usuarios_comercial_cristal.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>set_usuarios_comercial_cristal.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="set_usuarios_comercial_cristal.xss">
+      <DependentUpon>set_usuarios_comercial_cristal.xsd</DependentUpon>
+    </None>
+    <None Include="set_ventas_comercial_cristal.xsc">
+      <DependentUpon>set_ventas_comercial_cristal.xsd</DependentUpon>
+    </None>
+    <None Include="set_ventas_comercial_cristal.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>set_ventas_comercial_cristal.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="set_ventas_comercial_cristal.xss">
+      <DependentUpon>set_ventas_comercial_cristal.xsd</DependentUpon>
+    </None>
+    <None Include="set_venta_comercial_cristal.xsc">
+      <DependentUpon>set_venta_comercial_cristal.xsd</DependentUpon>
+    </None>
+    <None Include="set_venta_comercial_cristal.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>set_venta_comercial_cristal.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="set_venta_comercial_cristal.xss">
+      <DependentUpon>set_venta_comercial_cristal.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Controladores\Controladores.csproj">
+      <Project>{96acfde4-1ef9-413b-bffc-0de4d678860f}</Project>
+      <Name>Controladores</Name>
+    </ProjectReference>
+    <ProjectReference Include="Modelos\Modelos.csproj">
+      <Project>{35923e15-5d16-4922-b1ae-efee513560c5}</Project>
+      <Name>Modelos</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>

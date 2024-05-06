@@ -25,8 +25,15 @@ namespace Comercial_Cristal
             }
             else
             {
-                MessageBox.Show("Por favor seleccione un usuario","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Por favor seleccione un usuario","COMERCIAL CRISTAL - Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
+        }
+
+        private void form_usuario_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'set_usuarios_comercial_cristal.Usuario' Puede moverla o quitarla según sea necesario.
+            this.usuarioTableAdapter.Fill(this.set_usuarios_comercial_cristal.Usuario);
+
         }
     }
 }

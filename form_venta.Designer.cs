@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -37,12 +38,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_cliente = new FontAwesome.Sharp.IconButton();
             this.txt_ci = new System.Windows.Forms.TextBox();
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabla_detalle = new System.Windows.Forms.DataGridView();
+            this.detalleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.detalle_comercial_cristal = new Comercial_Cristal.detalle_comercial_cristal();
             this.combo_producto = new System.Windows.Forms.ComboBox();
             this.txt_cantidad = new System.Windows.Forms.TextBox();
             this.txt_precio = new System.Windows.Forms.TextBox();
@@ -59,9 +63,23 @@
             this.btn_volver = new FontAwesome.Sharp.IconButton();
             this.btn_imprimir = new FontAwesome.Sharp.IconButton();
             this.btn_aumentar = new FontAwesome.Sharp.IconButton();
-            this.btn_cliente = new FontAwesome.Sharp.IconButton();
+            this.combocolor = new System.Windows.Forms.ComboBox();
+            this.txt_codigo = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.detalleTableAdapter = new Comercial_Cristal.detalle_comercial_cristalTableAdapters.DetalleTableAdapter();
+            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subtotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.producto_comercial_cristal = new Comercial_Cristal.producto_comercial_cristal();
+            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productoTableAdapter = new Comercial_Cristal.producto_comercial_cristalTableAdapters.ProductoTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_detalle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detalleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detalle_comercial_cristal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.producto_comercial_cristal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // date_fecha
@@ -127,6 +145,27 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del cliente";
             // 
+            // btn_cliente
+            // 
+            this.btn_cliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_cliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cliente.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_cliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCyan;
+            this.btn_cliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
+            this.btn_cliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cliente.IconChar = FontAwesome.Sharp.IconChar.PersonCirclePlus;
+            this.btn_cliente.IconColor = System.Drawing.Color.Black;
+            this.btn_cliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_cliente.IconSize = 40;
+            this.btn_cliente.Location = new System.Drawing.Point(73, 115);
+            this.btn_cliente.Name = "btn_cliente";
+            this.btn_cliente.Size = new System.Drawing.Size(150, 57);
+            this.btn_cliente.TabIndex = 65;
+            this.btn_cliente.Text = "Nuevo cliente";
+            this.btn_cliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_cliente.UseVisualStyleBackColor = true;
+            this.btn_cliente.Click += new System.EventHandler(this.btn_cliente_Click);
+            // 
             // txt_ci
             // 
             this.txt_ci.Location = new System.Drawing.Point(117, 77);
@@ -182,6 +221,7 @@
             this.tabla_detalle.AllowUserToOrderColumns = true;
             this.tabla_detalle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabla_detalle.AutoGenerateColumns = false;
             this.tabla_detalle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tabla_detalle.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -193,6 +233,11 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.tabla_detalle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.tabla_detalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tabla_detalle.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codigoDataGridViewTextBoxColumn,
+            this.cantidadDataGridViewTextBoxColumn,
+            this.subtotalDataGridViewTextBoxColumn});
+            this.tabla_detalle.DataSource = this.detalleBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -216,8 +261,21 @@
             this.tabla_detalle.Size = new System.Drawing.Size(586, 222);
             this.tabla_detalle.TabIndex = 37;
             // 
+            // detalleBindingSource
+            // 
+            this.detalleBindingSource.DataMember = "Detalle";
+            this.detalleBindingSource.DataSource = this.detalle_comercial_cristal;
+            // 
+            // detalle_comercial_cristal
+            // 
+            this.detalle_comercial_cristal.DataSetName = "detalle_comercial_cristal";
+            this.detalle_comercial_cristal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // combo_producto
             // 
+            this.combo_producto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.combo_producto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
+            this.combo_producto.DataSource = this.productoBindingSource;
             this.combo_producto.FormattingEnabled = true;
             this.combo_producto.Location = new System.Drawing.Point(477, 107);
             this.combo_producto.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -227,7 +285,7 @@
             // 
             // txt_cantidad
             // 
-            this.txt_cantidad.Location = new System.Drawing.Point(477, 164);
+            this.txt_cantidad.Location = new System.Drawing.Point(477, 190);
             this.txt_cantidad.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txt_cantidad.Name = "txt_cantidad";
             this.txt_cantidad.Size = new System.Drawing.Size(160, 30);
@@ -236,7 +294,7 @@
             // txt_precio
             // 
             this.txt_precio.Enabled = false;
-            this.txt_precio.Location = new System.Drawing.Point(801, 106);
+            this.txt_precio.Location = new System.Drawing.Point(801, 146);
             this.txt_precio.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txt_precio.Name = "txt_precio";
             this.txt_precio.Size = new System.Drawing.Size(157, 30);
@@ -245,7 +303,7 @@
             // txt_subtotal
             // 
             this.txt_subtotal.Enabled = false;
-            this.txt_subtotal.Location = new System.Drawing.Point(801, 163);
+            this.txt_subtotal.Location = new System.Drawing.Point(801, 189);
             this.txt_subtotal.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txt_subtotal.Name = "txt_subtotal";
             this.txt_subtotal.Size = new System.Drawing.Size(157, 30);
@@ -254,7 +312,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(701, 166);
+            this.label11.Location = new System.Drawing.Point(701, 192);
             this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(88, 21);
@@ -264,17 +322,17 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(659, 109);
+            this.label10.Location = new System.Drawing.Point(707, 109);
             this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(130, 21);
+            this.label10.Size = new System.Drawing.Size(82, 21);
             this.label10.TabIndex = 28;
-            this.label10.Text = "Precio metro:";
+            this.label10.Text = "Código:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(369, 167);
+            this.label9.Location = new System.Drawing.Point(369, 193);
             this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(97, 21);
@@ -421,26 +479,82 @@
             this.btn_aumentar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_aumentar.UseVisualStyleBackColor = true;
             // 
-            // btn_cliente
+            // combocolor
             // 
-            this.btn_cliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_cliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cliente.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.btn_cliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCyan;
-            this.btn_cliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
-            this.btn_cliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cliente.IconChar = FontAwesome.Sharp.IconChar.PersonCirclePlus;
-            this.btn_cliente.IconColor = System.Drawing.Color.Black;
-            this.btn_cliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_cliente.IconSize = 40;
-            this.btn_cliente.Location = new System.Drawing.Point(73, 115);
-            this.btn_cliente.Name = "btn_cliente";
-            this.btn_cliente.Size = new System.Drawing.Size(150, 57);
-            this.btn_cliente.TabIndex = 65;
-            this.btn_cliente.Text = "Nuevo cliente";
-            this.btn_cliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_cliente.UseVisualStyleBackColor = true;
-            this.btn_cliente.Click += new System.EventHandler(this.btn_cliente_Click);
+            this.combocolor.FormattingEnabled = true;
+            this.combocolor.Location = new System.Drawing.Point(477, 147);
+            this.combocolor.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.combocolor.Name = "combocolor";
+            this.combocolor.Size = new System.Drawing.Size(160, 29);
+            this.combocolor.TabIndex = 68;
+            // 
+            // txt_codigo
+            // 
+            this.txt_codigo.Enabled = false;
+            this.txt_codigo.Location = new System.Drawing.Point(801, 106);
+            this.txt_codigo.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txt_codigo.Name = "txt_codigo";
+            this.txt_codigo.Size = new System.Drawing.Size(157, 30);
+            this.txt_codigo.TabIndex = 67;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(659, 149);
+            this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(130, 21);
+            this.label12.TabIndex = 66;
+            this.label12.Text = "Precio metro:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(369, 150);
+            this.label13.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(96, 21);
+            this.label13.TabIndex = 65;
+            this.label13.Text = "Producto:";
+            // 
+            // detalleTableAdapter
+            // 
+            this.detalleTableAdapter.ClearBeforeFill = true;
+            // 
+            // codigoDataGridViewTextBoxColumn
+            // 
+            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "codigo";
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
+            this.codigoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cantidadDataGridViewTextBoxColumn
+            // 
+            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "cantidad";
+            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            this.cantidadDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // subtotalDataGridViewTextBoxColumn
+            // 
+            this.subtotalDataGridViewTextBoxColumn.DataPropertyName = "subtotal";
+            this.subtotalDataGridViewTextBoxColumn.HeaderText = "Subtotal";
+            this.subtotalDataGridViewTextBoxColumn.Name = "subtotalDataGridViewTextBoxColumn";
+            this.subtotalDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // producto_comercial_cristal
+            // 
+            this.producto_comercial_cristal.DataSetName = "producto_comercial_cristal";
+            this.producto_comercial_cristal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productoBindingSource
+            // 
+            this.productoBindingSource.DataMember = "Producto";
+            this.productoBindingSource.DataSource = this.producto_comercial_cristal;
+            // 
+            // productoTableAdapter
+            // 
+            this.productoTableAdapter.ClearBeforeFill = true;
             // 
             // form_venta
             // 
@@ -448,6 +562,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Bisque;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.combocolor);
+            this.Controls.Add(this.txt_codigo);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.btn_aumentar);
             this.Controls.Add(this.btn_imprimir);
             this.Controls.Add(this.btn_limpiar);
@@ -479,9 +597,14 @@
             this.Name = "form_venta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "COMERCIAL CRISTAL - Nueva venta";
+            this.Load += new System.EventHandler(this.form_venta_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_detalle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detalleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detalle_comercial_cristal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.producto_comercial_cristal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -517,5 +640,18 @@
         private FontAwesome.Sharp.IconButton btn_imprimir;
         private FontAwesome.Sharp.IconButton btn_aumentar;
         private FontAwesome.Sharp.IconButton btn_cliente;
+        private System.Windows.Forms.ComboBox combocolor;
+        private System.Windows.Forms.TextBox txt_codigo;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private detalle_comercial_cristal detalle_comercial_cristal;
+        private System.Windows.Forms.BindingSource detalleBindingSource;
+        private detalle_comercial_cristalTableAdapters.DetalleTableAdapter detalleTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subtotalDataGridViewTextBoxColumn;
+        private producto_comercial_cristal producto_comercial_cristal;
+        private System.Windows.Forms.BindingSource productoBindingSource;
+        private producto_comercial_cristalTableAdapters.ProductoTableAdapter productoTableAdapter;
     }
 }

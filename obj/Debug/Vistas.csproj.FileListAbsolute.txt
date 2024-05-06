@@ -21,3 +21,13 @@ C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\obj\Debug\Comercial_Cristal
 C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\obj\Debug\Comercial_Cristal.form_principal.resources
 C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\obj\Debug\Comercial_Cristal.form_password.resources
 C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\obj\Debug\Comercial_Cristal.form_reportes.resources
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\bin\Debug\Controladores.dll
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\bin\Debug\EntityFramework.dll
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\bin\Debug\Modelos.dll
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\bin\Debug\Controladores.pdb
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\bin\Debug\Controladores.dll.config
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\bin\Debug\EntityFramework.xml
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\bin\Debug\Modelos.pdb
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\bin\Debug\Modelos.dll.config
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\bin\Debug\EntityFramework.SqlServer.xml

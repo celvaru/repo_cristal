@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -43,9 +44,16 @@
             this.nombre_txt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.set_cilente_comercial_cristal = new Comercial_Cristal.set_cilente_comercial_cristal();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clienteTableAdapter = new Comercial_Cristal.set_cilente_comercial_cristalTableAdapters.ClienteTableAdapter();
+            this.ciclienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreclienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_cliente)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.set_cilente_comercial_cristal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -126,6 +134,7 @@
             // tabla_cliente
             // 
             this.tabla_cliente.AllowUserToOrderColumns = true;
+            this.tabla_cliente.AutoGenerateColumns = false;
             this.tabla_cliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tabla_cliente.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -137,6 +146,10 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.tabla_cliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.tabla_cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tabla_cliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ciclienteDataGridViewTextBoxColumn,
+            this.nombreclienteDataGridViewTextBoxColumn});
+            this.tabla_cliente.DataSource = this.clienteBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -213,6 +226,32 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Nombre:";
             // 
+            // set_cilente_comercial_cristal
+            // 
+            this.set_cilente_comercial_cristal.DataSetName = "set_cilente_comercial_cristal";
+            this.set_cilente_comercial_cristal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataMember = "Cliente";
+            this.clienteBindingSource.DataSource = this.set_cilente_comercial_cristal;
+            // 
+            // clienteTableAdapter
+            // 
+            this.clienteTableAdapter.ClearBeforeFill = true;
+            // 
+            // ciclienteDataGridViewTextBoxColumn
+            // 
+            this.ciclienteDataGridViewTextBoxColumn.DataPropertyName = "ci_cliente";
+            this.ciclienteDataGridViewTextBoxColumn.HeaderText = "CI cliente";
+            this.ciclienteDataGridViewTextBoxColumn.Name = "ciclienteDataGridViewTextBoxColumn";
+            // 
+            // nombreclienteDataGridViewTextBoxColumn
+            // 
+            this.nombreclienteDataGridViewTextBoxColumn.DataPropertyName = "nombre_cliente";
+            this.nombreclienteDataGridViewTextBoxColumn.HeaderText = "Nombre cliente";
+            this.nombreclienteDataGridViewTextBoxColumn.Name = "nombreclienteDataGridViewTextBoxColumn";
+            // 
             // form_cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
@@ -230,10 +269,13 @@
             this.Name = "form_cliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "COMERCIAL CRISTAL - Registro de clientes";
+            this.Load += new System.EventHandler(this.form_cliente_Load);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabla_cliente)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.set_cilente_comercial_cristal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,5 +294,10 @@
         private FontAwesome.Sharp.IconButton btn_eliminar;
         private FontAwesome.Sharp.IconButton btn_agregar;
         private FontAwesome.Sharp.IconButton btn_cancelar;
+        private set_cilente_comercial_cristal set_cilente_comercial_cristal;
+        private System.Windows.Forms.BindingSource clienteBindingSource;
+        private set_cilente_comercial_cristalTableAdapters.ClienteTableAdapter clienteTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ciclienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreclienteDataGridViewTextBoxColumn;
     }
 }
