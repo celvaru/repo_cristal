@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,25 @@ namespace Comercial_Cristal
         public form_password()
         {
             InitializeComponent();
+            ver_datos();
+        }
+
+        static string conexion_cadena = "server= (localdb)\\ServidorCeleste ; database= comercial_cristal ; integrated security= true";
+        SqlConnection conexion = new SqlConnection(conexion_cadena);
+
+        //Ver usuario
+        private void ver_datos()
+        {
+
+            string consulta_usuario = "SELECT * FROM Usuario WHERE ci = '" + Program.usuario_activo + "'";
+            conexion.Open();
+            SqlCommand cmd_usuario = new SqlCommand(consulta_usuario, conexion);
+            SqlDataReader datos = cmd_usuario.ExecuteReader();
+            datos.Read();
+            label_usuario.Text = datos["nom_usuario"].ToString();
+            datos.Close();
+
+            conexion.Close();
         }
 
         //Cerrar ventana al cerrar sesión de usuario 

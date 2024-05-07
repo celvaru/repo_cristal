@@ -13,6 +13,3 @@ C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Controladores\bin\Debug\Ent
 C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Controladores\obj\Debug\Controladores.csproj.CopyComplete
 C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Controladores\obj\Debug\Controladores.dll
 C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Controladores\obj\Debug\Controladores.pdb
-C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Controladores\obj\Debug\Controladores.Migrations.InitialCreate.resources
-C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Controladores\obj\Debug\Controladores.csproj.GenerateResource.cache
-C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Controladores\obj\Debug\Controladores.Migrations.migra.resources

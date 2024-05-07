@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_password));
             this.btn_cancelar = new FontAwesome.Sharp.IconButton();
             this.btn_guardar = new FontAwesome.Sharp.IconButton();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label_usuario = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txt_ci = new System.Windows.Forms.TextBox();
+            this.txt_confirmar = new System.Windows.Forms.TextBox();
             this.txt_apellido = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_nombre = new System.Windows.Forms.TextBox();
@@ -80,14 +80,14 @@
             this.btn_guardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_guardar.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // label_usuario
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.Location = new System.Drawing.Point(288, 137);
-            this.label5.MaximumSize = new System.Drawing.Size(400, 28);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(260, 28);
-            this.label5.TabIndex = 55;
+            this.label_usuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label_usuario.Location = new System.Drawing.Point(288, 137);
+            this.label_usuario.MaximumSize = new System.Drawing.Size(400, 28);
+            this.label_usuario.Name = "label_usuario";
+            this.label_usuario.Size = new System.Drawing.Size(260, 28);
+            this.label_usuario.TabIndex = 55;
             // 
             // label4
             // 
@@ -98,15 +98,15 @@
             this.label4.TabIndex = 54;
             this.label4.Text = "Usuario:";
             // 
-            // txt_ci
+            // txt_confirmar
             // 
-            this.txt_ci.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_ci.Location = new System.Drawing.Point(288, 296);
-            this.txt_ci.MaximumSize = new System.Drawing.Size(400, 28);
-            this.txt_ci.Name = "txt_ci";
-            this.txt_ci.PasswordChar = '*';
-            this.txt_ci.Size = new System.Drawing.Size(260, 30);
-            this.txt_ci.TabIndex = 53;
+            this.txt_confirmar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_confirmar.Location = new System.Drawing.Point(288, 296);
+            this.txt_confirmar.MaximumSize = new System.Drawing.Size(400, 28);
+            this.txt_confirmar.Name = "txt_confirmar";
+            this.txt_confirmar.PasswordChar = '*';
+            this.txt_confirmar.Size = new System.Drawing.Size(260, 30);
+            this.txt_confirmar.TabIndex = 53;
             // 
             // txt_apellido
             // 
@@ -176,9 +176,9 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_guardar);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label_usuario);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txt_ci);
+            this.Controls.Add(this.txt_confirmar);
             this.Controls.Add(this.txt_apellido);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_nombre);
@@ -201,9 +201,9 @@
 
         private FontAwesome.Sharp.IconButton btn_cancelar;
         private FontAwesome.Sharp.IconButton btn_guardar;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label_usuario;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_ci;
+        private System.Windows.Forms.TextBox txt_confirmar;
         private System.Windows.Forms.TextBox txt_apellido;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_nombre;

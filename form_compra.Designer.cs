@@ -41,12 +41,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txt_rollos = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_registrar = new FontAwesome.Sharp.IconButton();
             this.btn_cancelar = new FontAwesome.Sharp.IconButton();
             this.txt_producto = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txt_precio = new System.Windows.Forms.TextBox();
             this.btn_actualizar = new FontAwesome.Sharp.IconButton();
+            this.btn_registrar = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
             // label2
@@ -157,25 +157,6 @@
             this.label1.TabIndex = 30;
             this.label1.Text = "Rollos añadidos:";
             // 
-            // btn_registrar
-            // 
-            this.btn_registrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_registrar.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.btn_registrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCyan;
-            this.btn_registrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
-            this.btn_registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_registrar.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.btn_registrar.IconColor = System.Drawing.Color.Black;
-            this.btn_registrar.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btn_registrar.IconSize = 40;
-            this.btn_registrar.Location = new System.Drawing.Point(234, 391);
-            this.btn_registrar.Name = "btn_registrar";
-            this.btn_registrar.Size = new System.Drawing.Size(162, 58);
-            this.btn_registrar.TabIndex = 62;
-            this.btn_registrar.Text = "Registrar producto";
-            this.btn_registrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_registrar.UseVisualStyleBackColor = true;
-            // 
             // btn_cancelar
             // 
             this.btn_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -242,6 +223,25 @@
             this.btn_actualizar.UseVisualStyleBackColor = true;
             this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
+            // btn_registrar
+            // 
+            this.btn_registrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_registrar.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_registrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCyan;
+            this.btn_registrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
+            this.btn_registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_registrar.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btn_registrar.IconColor = System.Drawing.Color.Black;
+            this.btn_registrar.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btn_registrar.IconSize = 40;
+            this.btn_registrar.Location = new System.Drawing.Point(234, 391);
+            this.btn_registrar.Name = "btn_registrar";
+            this.btn_registrar.Size = new System.Drawing.Size(162, 58);
+            this.btn_registrar.TabIndex = 62;
+            this.btn_registrar.Text = "Registrar producto";
+            this.btn_registrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_registrar.UseVisualStyleBackColor = true;
+            // 
             // form_compra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
@@ -293,11 +293,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_rollos;
         private System.Windows.Forms.Label label1;
-        private FontAwesome.Sharp.IconButton btn_registrar;
         private FontAwesome.Sharp.IconButton btn_cancelar;
         private System.Windows.Forms.TextBox txt_producto;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txt_precio;
         private FontAwesome.Sharp.IconButton btn_actualizar;
+        private FontAwesome.Sharp.IconButton btn_registrar;
     }
 }

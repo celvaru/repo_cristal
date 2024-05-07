@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,16 +18,31 @@ namespace Comercial_Cristal
             InitializeComponent();
         }
 
+        static string conexion_cadena = "server= (localdb)\\ServidorCeleste ; database= comercial_cristal ; integrated security= true";
+        SqlConnection conexion = new SqlConnection(conexion_cadena);
+
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
-            if(tabla_usuarios.SelectedRows.Count == 1)
+            DialogResult confirmacion = MessageBox.Show("¿Está seguro de eliminar el usuario seleccionado?\nEsta acción no se puede deshacer", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (confirmacion == DialogResult.OK)
             {
-                MessageBox.Show("¿Está seguro de eliminar el usuario seleccionado?\nEsta acción no se puede deshacer","Confirmación",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
+                conexion.Open();
+                string ci = tabla_usuarios.CurrentRow.Cells[0].Value.ToString();
+                string consulta_producto = "DELETE FROM Usuario WHERE ci =" + ci;
+                SqlCommand cmd_producto = new SqlCommand(consulta_producto, conexion);
+                cmd_producto.ExecuteNonQuery();
+
+                consulta_producto = "SELECT * FROM Usuario";
+
+                SqlDataAdapter adaptador = new SqlDataAdapter(consulta_producto, conexion);
+                DataTable dt = new DataTable();
+                adaptador.Fill(dt);
+                tabla_usuarios.DataSource = dt;
+                conexion.Close();
+
+
             }
-            else
-            {
-                MessageBox.Show("Por favor seleccione un usuario","COMERCIAL CRISTAL - Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }
+
         }
 
         private void form_usuario_Load(object sender, EventArgs e)

@@ -17,6 +17,16 @@ namespace Comercial_Cristal
             InitializeComponent();
         }
 
+        //Ocultar boton reportes
+        public void ocultar_boton()
+        {
+            if (Program.usuario_tipo == "Cajero")
+            {
+                btn_nreporte.Visible = false;
+                btn_nreporte.Enabled = false;
+            }
+        }
+
         private void btn_ncompra_Click(object sender, EventArgs e)
         {
             form_compra form_compra = new form_compra();

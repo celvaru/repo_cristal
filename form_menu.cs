@@ -18,10 +18,21 @@ namespace CeluCenter.Vistas
         {
             InitializeComponent();
             mostrar_forms(new form_principal());
+            ocultar_boton();
 
         }
 
         private Form form_activo = null;
+
+        //Ocultar pestaña usuarios
+        public void ocultar_boton()
+        {
+            if(Program.usuario_tipo == "Cajero")
+            {
+                btn_usuario.Visible = false;
+                btn_usuario.Enabled = false;
+            }
+        }
         
         //Alternamos la vista de los formularios
         private void mostrar_forms(Form formhijo)
@@ -87,6 +98,7 @@ namespace CeluCenter.Vistas
                 seleccion.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
+        //botones del menu
         private void btn_datos_Click(object sender, EventArgs e)
         {
             mostrar_forms(new form_datos());
@@ -121,7 +133,7 @@ namespace CeluCenter.Vistas
         {
             this.Close();
         }
-        //botones del menu
+        
 
 
 

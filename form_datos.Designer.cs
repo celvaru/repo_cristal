@@ -30,7 +30,7 @@
         {
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.ci_txt = new System.Windows.Forms.TextBox();
+            this.txt_ci = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_apellidos = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -66,13 +66,13 @@
             this.label7.TabIndex = 51;
             this.label7.Text = "Usuario:";
             // 
-            // ci_txt
+            // txt_ci
             // 
-            this.ci_txt.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ci_txt.Location = new System.Drawing.Point(589, 303);
-            this.ci_txt.Name = "ci_txt";
-            this.ci_txt.Size = new System.Drawing.Size(218, 30);
-            this.ci_txt.TabIndex = 50;
+            this.txt_ci.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_ci.Location = new System.Drawing.Point(589, 303);
+            this.txt_ci.Name = "txt_ci";
+            this.txt_ci.Size = new System.Drawing.Size(218, 30);
+            this.txt_ci.TabIndex = 50;
             // 
             // label4
             // 
@@ -243,7 +243,7 @@
             this.Controls.Add(this.label_usuario);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.ci_txt);
+            this.Controls.Add(this.txt_ci);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_apellidos);
             this.Controls.Add(this.label5);
@@ -265,7 +265,7 @@
         #endregion
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox ci_txt;
+        private System.Windows.Forms.TextBox txt_ci;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_apellidos;
         private System.Windows.Forms.Label label5;

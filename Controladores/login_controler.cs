@@ -1,4 +1,4 @@
-﻿using Modelos.DB;
+﻿using Modelos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,12 +6,15 @@ using System.Text;
 using System.Threading.Tasks;
 using Controladores;
 using System.Data.SqlClient;
+using System.Data.Entity;
 
 namespace Controladores
 {
     public class login_controler
     {
         contexto contexto = new contexto();
+
+        
         public bool login(string usuario, string password)
         {
                 var log = contexto.Usuario.Where(x => x.nom_usuario == usuario && x.password == password).SingleOrDefault();

@@ -53,34 +53,17 @@
   <ItemGroup>
     <Compile Include="contexto.cs" />
     <Compile Include="login_controler.cs" />
-    <Compile Include="Migrations\202405020036357_InitialCreate.cs" />
-    <Compile Include="Migrations\202405020036357_InitialCreate.designer.cs">
-      <DependentUpon>202405020036357_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202405020512393_migra.cs" />
-    <Compile Include="Migrations\202405020512393_migra.designer.cs">
-      <DependentUpon>202405020512393_migra.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Modelos\Modelos.csproj">
-      <Project>{35923e15-5d16-4922-b1ae-efee513560c5}</Project>
-      <Name>Modelos</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202405020036357_InitialCreate.resx">
-      <DependentUpon>202405020036357_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202405020512393_migra.resx">
-      <DependentUpon>202405020512393_migra.cs</DependentUpon>
-    </EmbeddedResource>
+    <ProjectReference Include="..\Modelos\Modelos.csproj">
+      <Project>{39b1b498-454b-457f-a74a-e45ce614cb71}</Project>
+      <Name>Modelos</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
