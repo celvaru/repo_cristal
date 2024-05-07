@@ -10,3 +10,7 @@ C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Modelos\obj\Debug\Modelos.c
 C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Modelos\obj\Debug\Modelos.csproj.CopyComplete
 C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Modelos\obj\Debug\Modelos.dll
 C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Modelos\obj\Debug\Modelos.pdb
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Modelos\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Modelos\bin\Debug\itextsharp.dll
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Modelos\bin\Debug\itextsharp.xmlworker.dll
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Modelos\bin\Debug\itextsharp.xml

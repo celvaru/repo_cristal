@@ -11,8 +11,7 @@ namespace Modelos
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Producto
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,20 +19,13 @@ namespace Modelos
         {
             this.Detalle = new HashSet<Detalle>();
         }
-
-        [Required]
+    
         public string nombre_producto { get; set; }
-        [Required]
         public double ancho { get; set; }
-        [Required]
         public int metro_rollo { get; set; }
-        [Required]
         public double precio { get; set; }
-        [Key]
         public int codigo { get; set; }
-        [Required]
         public double metros { get; set; }
-        [Required]
         public int rollos { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

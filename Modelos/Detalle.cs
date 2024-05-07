@@ -11,17 +11,12 @@ namespace Modelos
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Detalle
     {
-        [Required]
         public double cantidad { get; set; }
-        [Required]
         public double subtotal { get; set; }
-        [Required]
         public int codigo { get; set; }
-        [Key]
         public int num_venta { get; set; }
     
         public virtual Producto Producto { get; set; }

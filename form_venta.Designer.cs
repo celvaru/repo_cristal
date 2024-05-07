@@ -172,6 +172,7 @@
             // 
             // txt_cliente
             // 
+            this.txt_cliente.Enabled = false;
             this.txt_cliente.Location = new System.Drawing.Point(117, 77);
             this.txt_cliente.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txt_cliente.Name = "txt_cliente";
@@ -220,6 +221,7 @@
             this.combo_producto.Name = "combo_producto";
             this.combo_producto.Size = new System.Drawing.Size(160, 29);
             this.combo_producto.TabIndex = 33;
+            this.combo_producto.SelectedIndexChanged += new System.EventHandler(this.combo_producto_SelectedIndexChanged);
             // 
             // txt_precio
             // 
@@ -408,6 +410,7 @@
             this.btn_aumentar.Text = "Añadir";
             this.btn_aumentar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_aumentar.UseVisualStyleBackColor = true;
+            this.btn_aumentar.Click += new System.EventHandler(this.btn_aumentar_Click);
             // 
             // txt_codigo
             // 
@@ -467,6 +470,7 @@
             this.txt_cantidad.Name = "txt_cantidad";
             this.txt_cantidad.Size = new System.Drawing.Size(160, 30);
             this.txt_cantidad.TabIndex = 70;
+            this.txt_cantidad.ValueChanged += new System.EventHandler(this.txt_cantidad_ValueChanged);
             // 
             // form_venta
             // 
@@ -507,7 +511,6 @@
             this.Name = "form_venta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "COMERCIAL CRISTAL - Nueva venta";
-            this.Load += new System.EventHandler(this.form_venta_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_detalle)).EndInit();

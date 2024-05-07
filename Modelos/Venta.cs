@@ -11,8 +11,7 @@ namespace Modelos
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Venta
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,16 +19,11 @@ namespace Modelos
         {
             this.Detalle = new HashSet<Detalle>();
         }
-
-        [Key]
+    
         public int num_venta { get; set; }
-        [Required]
         public System.DateTime fecha { get; set; }
-        [Required]
         public double total { get; set; }
-        [Required]
         public int ci { get; set; }
-        [Required]
         public int ci_cliente { get; set; }
     
         public virtual Cliente Cliente { get; set; }

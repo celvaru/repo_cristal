@@ -37,10 +37,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.combo_mes = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabla_reporte = new System.Windows.Forms.DataGridView();
             this.combo_anio = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btn_buscar = new FontAwesome.Sharp.IconButton();
+            ((System.ComponentModel.ISupportInitialize)(this.tabla_reporte)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_documento
@@ -51,7 +52,7 @@
             this.btn_documento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCyan;
             this.btn_documento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
             this.btn_documento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_documento.IconChar = FontAwesome.Sharp.IconChar.FileText;
+            this.btn_documento.IconChar = FontAwesome.Sharp.IconChar.FilePdf;
             this.btn_documento.IconColor = System.Drawing.Color.Black;
             this.btn_documento.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_documento.IconSize = 40;
@@ -62,6 +63,7 @@
             this.btn_documento.Text = "Ver documento";
             this.btn_documento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_documento.UseVisualStyleBackColor = true;
+            this.btn_documento.Click += new System.EventHandler(this.btn_documento_Click);
             // 
             // btn_volver
             // 
@@ -123,7 +125,7 @@
             this.combo_reporte.Items.AddRange(new object[] {
             "Ventas",
             "Ganancias"});
-            this.combo_reporte.Location = new System.Drawing.Point(148, 84);
+            this.combo_reporte.Location = new System.Drawing.Point(111, 88);
             this.combo_reporte.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.combo_reporte.Name = "combo_reporte";
             this.combo_reporte.Size = new System.Drawing.Size(144, 29);
@@ -133,7 +135,7 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(64, 87);
+            this.label8.Location = new System.Drawing.Point(27, 90);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(86, 21);
@@ -157,51 +159,39 @@
             "Octubre",
             "Noviembre",
             "Diciembre"});
-            this.combo_mes.Location = new System.Drawing.Point(553, 84);
+            this.combo_mes.Location = new System.Drawing.Point(482, 88);
             this.combo_mes.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.combo_mes.Name = "combo_mes";
-            this.combo_mes.Size = new System.Drawing.Size(132, 29);
+            this.combo_mes.Size = new System.Drawing.Size(150, 29);
             this.combo_mes.TabIndex = 71;
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(500, 87);
+            this.label2.Location = new System.Drawing.Point(429, 91);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 21);
             this.label2.TabIndex = 70;
             this.label2.Text = "Mes:";
             // 
-            // dataGridView1
+            // tabla_reporte
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(68, 134);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(619, 370);
-            this.dataGridView1.TabIndex = 72;
+            this.tabla_reporte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.tabla_reporte.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tabla_reporte.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
+            this.tabla_reporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tabla_reporte.Location = new System.Drawing.Point(26, 134);
+            this.tabla_reporte.Name = "tabla_reporte";
+            this.tabla_reporte.Size = new System.Drawing.Size(702, 370);
+            this.tabla_reporte.TabIndex = 72;
             // 
             // combo_anio
             // 
             this.combo_anio.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combo_anio.FormattingEnabled = true;
-            this.combo_anio.Items.AddRange(new object[] {
-            "Enero",
-            "Febrero",
-            "Marzo",
-            "Abril",
-            "Mayo",
-            "Junio",
-            "Julio",
-            "Agosto",
-            "Septiembre",
-            "Octubre",
-            "Noviembre",
-            "Diciembre"});
-            this.combo_anio.Location = new System.Drawing.Point(373, 84);
+            this.combo_anio.Location = new System.Drawing.Point(320, 87);
             this.combo_anio.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.combo_anio.Name = "combo_anio";
             this.combo_anio.Size = new System.Drawing.Size(97, 29);
@@ -211,12 +201,33 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(322, 87);
+            this.label3.Location = new System.Drawing.Point(267, 91);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 21);
             this.label3.TabIndex = 73;
             this.label3.Text = "Año:";
+            // 
+            // btn_buscar
+            // 
+            this.btn_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_buscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_buscar.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_buscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCyan;
+            this.btn_buscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
+            this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_buscar.IconChar = FontAwesome.Sharp.IconChar.FileText;
+            this.btn_buscar.IconColor = System.Drawing.Color.Black;
+            this.btn_buscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_buscar.IconSize = 23;
+            this.btn_buscar.Location = new System.Drawing.Point(650, 86);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(78, 30);
+            this.btn_buscar.TabIndex = 75;
+            this.btn_buscar.Text = "Ver";
+            this.btn_buscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // form_reportes
             // 
@@ -224,9 +235,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Bisque;
             this.ClientSize = new System.Drawing.Size(754, 611);
+            this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.combo_anio);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.tabla_reporte);
             this.Controls.Add(this.combo_mes);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.combo_reporte);
@@ -243,7 +255,7 @@
             this.Name = "form_reportes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "COMERCIAL CRISTAL - Reportes";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabla_reporte)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,8 +271,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox combo_mes;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView tabla_reporte;
         private System.Windows.Forms.ComboBox combo_anio;
         private System.Windows.Forms.Label label3;
+        private FontAwesome.Sharp.IconButton btn_buscar;
     }
 }

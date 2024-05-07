@@ -11,8 +11,7 @@ namespace Modelos
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Cliente
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,10 +19,8 @@ namespace Modelos
         {
             this.Venta = new HashSet<Venta>();
         }
-
-        [Key]
+    
         public int ci_cliente { get; set; }
-        [Required]
         public string nombre_cliente { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
