@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Data.SqlClient;
 using System.Drawing.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CeluCenter.Vistas
+namespace Comercial_Cristal
 {
     public partial class form_menu : Form
     {
@@ -27,7 +28,8 @@ namespace CeluCenter.Vistas
         //Ocultar pestaña usuarios
         public void ocultar_boton()
         {
-            if(Program.usuario_tipo == "Cajero")
+            Console.WriteLine("Tipo: "+Program.usuario_tipo);
+            if (Program.usuario_tipo == "Cajero")
             {
                 btn_usuario.Visible = false;
                 btn_usuario.Enabled = false;
@@ -59,14 +61,16 @@ namespace CeluCenter.Vistas
                 btn_datos.BackColor = Color.DeepSkyBlue;
                 btn_datos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
                 btn_datos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
-                btn_datos.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                btn_datos.Font = new System.Drawing.Font("Rockwell",
+                                14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
             if (btn_hventas.BackColor != Color.DeepSkyBlue)
             {
                 btn_hventas.BackColor = Color.DeepSkyBlue;
                 btn_hventas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
                 btn_hventas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
-                btn_hventas.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                btn_hventas.Font = new System.Drawing.Font("Rockwell",
+                                14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
                 
             if (btn_inventario.BackColor != Color.DeepSkyBlue)
@@ -74,7 +78,8 @@ namespace CeluCenter.Vistas
                 btn_inventario.BackColor = Color.DeepSkyBlue;
                 btn_inventario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
                 btn_inventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
-                btn_inventario.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                btn_inventario.Font = new System.Drawing.Font("Rockwell",
+                                14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
                
             if (btn_usuario.BackColor != Color.DeepSkyBlue)
@@ -82,7 +87,8 @@ namespace CeluCenter.Vistas
                 btn_usuario.BackColor = Color.DeepSkyBlue;
                 btn_usuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
                 btn_usuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
-                btn_usuario.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                btn_usuario.Font = new System.Drawing.Font("Rockwell",
+                                14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
                 
         }

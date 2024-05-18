@@ -3,7 +3,6 @@ C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\bin\Debug\Comercial Cristal
 C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\bin\Debug\Comercial Cristal.pdb
 C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\obj\Debug\Vistas.csproj.AssemblyReference.cache
 C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\obj\Debug\Comercial_Cristal.form_login.resources
-C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\obj\Debug\CeluCenter.Vistas.form_menu.resources
 C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\obj\Debug\Comercial_Cristal.Properties.Resources.resources
 C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\obj\Debug\Vistas.csproj.GenerateResource.cache
 C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\obj\Debug\Vistas.csproj.CoreCompileInputs.cache
@@ -31,3 +30,8 @@ C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\bin\Debug\Modelos.pdb
 C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\bin\Debug\Modelos.dll.config
 C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\bin\Debug\itextsharp.dll
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\bin\Debug\itextsharp.xmlworker.dll
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\bin\Debug\itextsharp.xml
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\obj\Debug\Comercial_Cristal.form_menu.resources

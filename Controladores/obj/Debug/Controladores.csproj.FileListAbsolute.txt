@@ -13,3 +13,7 @@ C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Controladores\bin\Debug\Ent
 C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Controladores\obj\Debug\Controladores.csproj.CopyComplete
 C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Controladores\obj\Debug\Controladores.dll
 C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Controladores\obj\Debug\Controladores.pdb
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Controladores\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Controladores\bin\Debug\itextsharp.dll
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Controladores\bin\Debug\itextsharp.xmlworker.dll
+C:\Users\usuario\Celeste\Proyectos\Comercial Cristal\Controladores\bin\Debug\itextsharp.xml

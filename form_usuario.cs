@@ -29,7 +29,8 @@ namespace Comercial_Cristal
         }
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
-            DialogResult confirmacion = MessageBox.Show("¿Está seguro de eliminar el usuario seleccionado?\nEsta acción no se puede deshacer", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            DialogResult confirmacion = MessageBox.Show("¿Está seguro de eliminar el usuario seleccionado?\nEsta acción no se puede deshacer",
+                                        "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             if (confirmacion == DialogResult.OK)
             {
                 conexion.Open();
@@ -65,7 +66,8 @@ namespace Comercial_Cristal
                 txt_usuario.Text = txt_nombres.Text.Substring(0, 3) + txt_apellidos.Text.Substring(0, 3);
                 conexion.Open();
                 string ci = tabla_usuarios.CurrentRow.Cells[0].Value.ToString();
-                string consulta_usuario = "INSERT INTO Usuario VALUES (" + txt_ci.Text + ",'" + txt_nombres.Text + "','" + txt_apellidos.Text + "'," + txt_telefono.Text + ",'" + txt_usuario.Text + "','" + pass + "','" + combo_cargo.SelectedItem + "')";
+                string consulta_usuario = "INSERT INTO Usuario VALUES (" + txt_ci.Text + ",'" + txt_nombres.Text + "','" + txt_apellidos.Text + "'," +
+                                          txt_telefono.Text + ",'" + txt_usuario.Text + "','" + pass + "','" + combo_cargo.SelectedItem + "')";
                 
                 try
                 {

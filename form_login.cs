@@ -1,4 +1,4 @@
-﻿using CeluCenter.Vistas;
+﻿using Comercial_Cristal;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -60,7 +60,8 @@ namespace Comercial_Cristal
             }
             else
             {
-                MessageBox.Show("Por favor, introduzca un usuario y contraseña válidos", "COMERCIAL CRISTAL - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor, introduzca un usuario y contraseña válidos",
+                                "COMERCIAL CRISTAL - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conexion.Close();
             }
 

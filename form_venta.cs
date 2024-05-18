@@ -1,4 +1,4 @@
-﻿using CeluCenter.Vistas;
+﻿using Comercial_Cristal;
 using System;
 using System.Data;
 using System.Data.Common;
@@ -13,6 +13,8 @@ namespace Comercial_Cristal
         public form_venta()
         {
             InitializeComponent();
+            date_fecha.MinDate = "1/1/2024";
+            date_fecha.MaxDate = DateTime.Today;
             date_fecha.Value = DateTime.Today;
             label_total.Text = total_venta.ToString();
             form_venta_Load();

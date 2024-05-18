@@ -1,4 +1,4 @@
-﻿using CeluCenter.Vistas;
+﻿using Comercial_Cristal;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -73,7 +73,7 @@ namespace Comercial_Cristal
                 string consulta_ventas =    "SELECT SUM(cantidad) AS 'Metros vendidos', p.codigo AS 'Código producto', p.nombre_producto AS 'Producto' " +
                                             "FROM Detalle d, Producto p, Venta v " +
                                             "WHERE v.num_venta = d.num_venta AND d.codigo = p.codigo AND YEAR(fecha) = " + combo_anio.Text + " AND MONTH(fecha) = " + Convert.ToString(combo_mes.SelectedIndex + 1) + 
-                                            " GROUP BY p.codigo, p.nombre_producto " +
+                                            "GROUP BY p.codigo, p.nombre_producto " +
                                             "ORDER BY [Metros vendidos]";
                 conexion.Open();
                 SqlCommand cmd_ventas = new SqlCommand(consulta_ventas, conexion);
@@ -105,6 +105,8 @@ namespace Comercial_Cristal
             SaveFileDialog guardar = new SaveFileDialog();
             guardar.FileName = "Reporte de " + combo_reporte.Text + " " + combo_mes.Text + " de " + combo_anio.Text + ".pdf";
             guardar.ShowDialog();
+
+
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using CeluCenter.Vistas;
+﻿using Comercial_Cristal;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,7 +45,8 @@ namespace Comercial_Cristal
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
-            DialogResult confirmacion = MessageBox.Show("¿Está seguro de eliminar el usuario seleccionado?\nEsta acción no se puede deshacer", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            DialogResult confirmacion = MessageBox.Show("¿Está seguro de eliminar el usuario seleccionado?\nEsta acción no se puede deshacer",
+                                        "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             if (confirmacion == DialogResult.OK)
             {
                 conexion.Open();
